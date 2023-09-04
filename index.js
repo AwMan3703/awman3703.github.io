@@ -5,11 +5,13 @@ const make = (tag) => { return document.createElement(tag) };
 
 //actual functions
 let popups = 0;
-const makePopup = (title, description) => {
-    console.log('started')
-
+const makePopup = (title, description, closeCallback = function(e){}) => {
     let popupId = `popup_${popups}`
-    let closePopup = () => document.getElementById(popupId).remove()
+    let closePopup = () => {
+        const e = document.getElementById(popupId)
+        e.remove()
+        closeCallback(e)
+    }
 
     let popupNode = make('div')
     popupNode.id = popupId
@@ -55,7 +57,13 @@ window.onload = function() {
         'This site is not yet finished, and may not work properly!'+
         '<br>(you can press X to continue anyway)'+
         '<hr style="opacity:2%">'+
-        '<span style="opacity:15%">for more information, contact me on discord: Aw Man#3646</span>'))
+        '<span style="opacity:15%">for more information, contact me on discord: Aw Man#3646</span>',
+        function(_) {
+            const e = document.getElementById('popupblur')
+            e.style.opacity = '0%';
+            e.remove()
+        }
+        ))
 };
 
 
