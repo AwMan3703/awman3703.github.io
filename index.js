@@ -1,43 +1,62 @@
 
+//shorthands
+const make = (tag) => { return document.createElement(tag) };
+
+
+//actual functions
 let popups = 0;
 const makePopup = (title, description) => {
-    alert('callsed')
+    console.log('started')
+
     let popupId = `popup_${popups}`
     let closePopup = () => document.getElementById(popupId).remove()
 
-    let popupNode = document.createElement('div')
+    let popupNode = make('div')
     popupNode.id = popupId
-    popupNode.classList = 'horizontal classmorphism'
+    popupNode.classList = 'popup'
 
-    let xNode = document.createElement('div')
+    let xNode = make('div')
     xNode.classList = 'pointer secondary-text'
-    xNode.style.fontFamily = 'system-ui';
-    xNode.style.fontSize = 'xxlarge';
+    xNode.style.fontFamily = '\'Courier New\', Courier, monospace;';
+    xNode.style.fontSize = 'xxx-large';
     xNode.onclick = closePopup;
     xNode.innerText = 'X'
 
-    let titleNode = document.createElement('h1')
-    titleNode.innerText = title;
+    let bodyNode = make('div')
+    bodyNode.classList = 'vertical'
 
-    let descNode = document.createElement('h1')
-    descNode.innerText = title;
-    popupNode.innerHTML = `
-    <div class="pointer secondary-text" style="font-family: system-ui; font-size: xx-large;" onclick="${closePopup}">
-    X
-    </div> <hr class="vertical" style="height: 200px;">
-    <div class="vertical">
-        <h1>Work in <span style="color: white;">progress</span>!</h1> <hr>
-        <p class="secondary-text">
-            please be patient while i set up the website :) <br>
-            (or press X to continue to the incomplete page)
-        </p>
-    </div>
-    `
+    let titleNode = make('h1')
+    titleNode.innerHTML = title;
 
+    let descNode = make('p')
+    descNode.classList = 'secondary-text'
+    descNode.innerHTML = description;
 
-    popups += 1
-    return popupNode
+    bodyNode.appendChild(titleNode)
+    bodyNode.appendChild(make('hr'))
+    bodyNode.appendChild(descNode)
+
+    let vhr = make('hr')
+    vhr.classList = 'vertical'
+    vhr.style.height = '170px';
+
+    popupNode.appendChild(xNode)
+    popupNode.appendChild(vhr)
+    popupNode.appendChild(bodyNode)
+
+    popups += 1;
+    return popupNode;
 }
 
-document.getElementById('popupblur').appendChild(makePopup('Work in progress!', 'site is incomplete'))
+
+window.onload = function() {
+    document.getElementById('popupblur').appendChild(makePopup(
+        'Work in progress :)',
+        'This site is not yet finished, and may not work properly!'+
+        '<br>(you can press X to continue anyway)'+
+        '<hr style="opacity:2%">'+
+        '<span style="opacity:15%">for more information, contact me on discord: Aw Man#3646</span>'))
+};
+
+
 
