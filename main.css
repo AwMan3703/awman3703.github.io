@@ -2,7 +2,7 @@
 :root {
     --font-main: 'Courier New', Courier, monospace;
     --color-text-main: white;
-    --color-text-secondary: #b0b3ff9f;
+    --color-text-secondary: #d9dafd9f;
     --color-bg-body: #10131d;
     --color-bg-element: #1a1e2d;
     --color-bg-gradient-1: #0b0c11;
@@ -47,6 +47,10 @@ li {
     align-items: center;
 }
 
+.secondary-text {
+    color: var(--color-text-secondary);
+}
+
 .glassmorphism {
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -54,6 +58,8 @@ li {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
+
+.pointer { cursor: pointer; }
 
 #popup {
     align-items: center;
