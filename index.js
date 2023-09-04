@@ -15,7 +15,7 @@ const makePopup = (title, description, closeCallback = function(e){}) => {
 
     let popupNode = make('div')
     popupNode.id = popupId
-    popupNode.classList = 'popup'
+    popupNode.classList = 'popup horizontal glassmorphism'
 
     let xNode = make('div')
     xNode.classList = 'pointer secondary-text'

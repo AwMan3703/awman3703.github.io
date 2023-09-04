@@ -31,16 +31,30 @@ hr.vertical{
     width:          1px; 
 }
 
-ul {
+ul, ol {    
+    padding: 0px;
+    margin-inline: 0px;
+
     list-style-type: none;
 }
 li {
     width: 100%;
-    border-bottom: dotted;
+    padding: 20px;
+    border-bottom: 2px solid var(--color-bg-element);
+
+    text-align: center;
+    transform-style: preserve-3d;
+    transform: translateX(-14%);
+
+    display: flex;
+
+    text-transform: capitalize;
+}
+li:last-child {
+    border: none;
 }
 
 .vertical { display: block; }
-.popup,
 .horizontal { display: flex; }
 .centered { 
     display: flex;
@@ -52,7 +66,6 @@ li {
     color: var(--color-text-secondary);
 }
 
-.popup,
 .glassmorphism {
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -77,4 +90,5 @@ li {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    z-index: 10;
 }
