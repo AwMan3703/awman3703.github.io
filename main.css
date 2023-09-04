@@ -37,6 +37,7 @@ ul {
 li {
     width: 100%;
     border-bottom: dotted;
+    text-align: center;
 }
 
 .vertical { display: block; }
