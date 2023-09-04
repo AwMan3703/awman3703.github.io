@@ -10,6 +10,7 @@
 }
 
 * {
+    user-select: none;
     font-family: var(--font-main);
     color: var(--color-text-main);
     transition: all .15s !important;
@@ -21,14 +22,17 @@ body {
     background-image: radial-gradient(circle, var(--color-bg-gradient-1) 30%, var(--color-bg-gradient-2) 100%);
 }
 
-hr {
-    opacity: 10%;
-}
+hr { opacity: 10%; }
 hr.vertical{ 
     border:         none;
     border-left:    2px solid;
     height:         100vh;
     width:          1px; 
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 ul, ol {    
@@ -50,9 +54,7 @@ li {
 
     text-transform: capitalize;
 }
-li:last-child {
-    border: none;
-}
+li:last-child { border: none; }
 
 .vertical { display: block; }
 .horizontal { display: flex; }
@@ -62,9 +64,7 @@ li:last-child {
     align-items: center;
 }
 
-.secondary-text {
-    color: var(--color-text-secondary);
-}
+.secondary-text { color: var(--color-text-secondary); }
 
 .glassmorphism {
     backdrop-filter: blur(12px) saturate(180%);
@@ -81,6 +81,10 @@ li:last-child {
     gap: 20px;
     padding-inline: 20px;
 }
+
+ol#menu:hover>li>a, ul#menu:hover>li>a { color: var(--color-text-secondary); }
+ol#menu>li:hover>a, ul#menu>li:hover>a { color: var(--color-text-main); }
+
 #popupblur {
     position: fixed;
     padding: 0px;
