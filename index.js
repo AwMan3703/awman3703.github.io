@@ -11,7 +11,7 @@ const playAudio = (path) => {
     audio.play();
 }
 
-const makePopup = (title, description, closeCallback = function(e){}) => {
+const makePopup = (title, description, closeCallback = function(_){}) => {
     let popupId = `popup_${getId()}`
     let closePopup = () => {
         const e = document.getElementById(popupId)
