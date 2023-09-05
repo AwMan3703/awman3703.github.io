@@ -1,0 +1,29 @@
+
+.mobile-only  { visibility: hidden; display: none; }
+.tablet-only  { visibility: hidden; display: none; }
+.desktop-only  { visibility: hidden; display: none; }
+.large-desktop-only { visibility: hidden; display: none; }
+
+/* Small devices (landscape phones, 576px and up) */
+@media all and (max-width: 576px) {
+    .hide-mobile { visibility: hidden; display: none; }
+    .any-screen, .mobile-only { visibility: visible; display: initial; }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .hide-tablet { visibility: hidden; display: none; }
+    .any-screen, .tablet-only { visibility: visible; display: initial; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .hide-desktop { visibility: hidden; display: none; }
+    .any-screen, .desktop-only { visibility: visible; display: initial; }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .hide-large-desktop { visibility: hidden; display: none; }
+    .any-screen, .desktop-only, .large-desktop-only { visibility: visible; display: initial; }
+}

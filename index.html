@@ -4,28 +4,32 @@
         <title>Aw Man3703 v0.5-dev</title>
 
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="screen-size.css">
         <script src="index.js"></script>
     </head>
     <body class="any-screen">
         <!--MOBILE BAD!!! GRRR-->
-        <p class="mobile-only">
-            <h1>Imagine trying to load this page on mobile</h1>
-            <h3>Cringe</h3>
-        </p>
-
-        <!--Popup to warn that the site is incomplete-->
-        <div id="popupblur">
+        <div class="mobile-only">
+            <h1 class="mobile-only">Imagine trying to load this page on mobile</h1><br>
+            <h3 class="mobile-only">Cringe</h3>
         </div>
 
-        <!--Actual body-->
-        <header role="header" class="center-items">
-            <div class="menu rounded">
-                <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">about</a></div>
-                <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">skills</a></div>
-                <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">projects</a></div>
-                <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">contact</a></div>
+        <!--ACTUAL BODY-->
+        <main class="hide-mobile">
+            <!--Popup to warn that the site is incomplete-->
+            <div id="popupblur">
             </div>
-        </header>
+            
+            <!--Main content-->
+            <header role="header" class="center-items">
+                <div class="menu rounded">
+                    <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">about</a></div>
+                    <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">skills</a></div>
+                    <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">projects</a></div>
+                    <div onmouseenter="btnHoverSound()" class="menu-item"><a href="#">contact</a></div>
+                </div>
+            </header>
+        </main>
     </body>
 </html>
 

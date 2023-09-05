@@ -1,20 +1,4 @@
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) { 
-    body > *:not(.any-screen or .mobile-only) { display: none !important; }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 577px) and (max-width: 768px) { 
-    *.mobile-only { display: none !important }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {  }
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {  }
-
 :root {
     --font-main: monospace;
     --color-text-main: white;
