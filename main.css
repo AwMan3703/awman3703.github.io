@@ -1,6 +1,20 @@
 
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    body /*> *:not(.mobile-bad)*/ { display: none !important; }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
 :root {
-    --font-main: 'Courier New', Courier, monospace;
+    --font-main: monospace;
     --color-text-main: white;
     --color-text-secondary: #d9dafd9f;
     --color-bg-body: #10131d;
@@ -16,10 +30,11 @@
     color: var(--color-text-main);
     max-width: 100vw !important;
     transition: all .15s !important;
-    overflow-x: hidden;
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     background-color: var(--color-bg);
     background-image: radial-gradient(circle, var(--color-bg-gradient-1) 30%, var(--color-bg-gradient-2) 100%);
@@ -108,23 +123,35 @@ li:last-child { border: none; }
     aspect-ratio: 1;
     display: inline-block;
     margin-inline-end: 5%;
+    filter: drop-shadow(-4px 4px 6px #090b14);
     content: "";
 }
 .menu-item::after{
     display: inline-block;
-    margin-inline-start: 5%;
+    margin-inline-start: 5%;    
     color: var(--color-text-secondary);
     font-weight: 100;
     text-transform: none;
     opacity: 50%;
-    content: "/folder/";
+    content: "/folder";
+    position: relative;
 }
-.menu:hover > .menu-item > a { color: var(--color-text-secondary); }
-.menu-item:hover { background-color: var(--color-bg-element); }
+.menu-item:hover {
+    background-color: var(--color-bg-element);
+    transform: translateX(.5%);
+    border-radius: 12px;
+}
 .menu-item > a { font-size: 1.5em; }
+.menu:hover > .menu-item > a { color: var(--color-text-secondary); }
 .menu-item:hover > a { color: var(--color-text-main) !important; }
+.menu:hover > .menu-item { border-color: #00000000; }
 .menu:hover > .menu-item::before { background-image: url('img/icons/file.svg'); opacity: 50%; }
 .menu-item:hover::before { background-image: url('img/icons/file_colour.svg') !important; opacity: 100% !important; }
+.menu-item:hover::after { content: "root/folder >"; }
+
+.menu-item:active { padding-inline: 5%; }
+.menu-item:active::before { background-image: url('img/icons/file.svg') !important; }
+.menu-item:active::after { content: "cd ./folder"; }
 
 .popup {
     align-items: center;
