@@ -136,7 +136,7 @@ li:last-child { border: none; }
 #popupblur {
     position: fixed;
     padding: 0px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     display: flex;
     justify-content: center;
     align-items: center;
