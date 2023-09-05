@@ -1,12 +1,19 @@
 
-//shorthands
-const make = (tag) => { return document.createElement(tag) };
+//utility
+let ids_counter = 0
+const getId = () => { ids_counter += 1; return ids_counter; }
+const make = (tag) => { return document.createElement(tag); }
+const getExt = (path) => { return path.split('.').pop(); }
 
 
-//actual functions
-let popups = 0;
+//generic functions
+const playAudio = (path) => {
+    const audio = new Audio(path);
+    audio.play();
+}
+
 const makePopup = (title, description, closeCallback = function(e){}) => {
-    let popupId = `popup_${popups}`
+    let popupId = `popup_${getId()}`
     let closePopup = () => {
         const e = document.getElementById(popupId)
         e.remove()
@@ -19,9 +26,9 @@ const makePopup = (title, description, closeCallback = function(e){}) => {
 
     let xNode = make('div')
     xNode.classList = 'pointer secondary-text'
-    xNode.style.fontFamily = '\'Courier New\', Courier, monospace;';
-    xNode.style.fontSize = 'xxx-large';
-    xNode.onclick = closePopup;
+    xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
+    xNode.style.fontSize = 'xxx-large'
+    xNode.onclick = closePopup
     xNode.innerText = 'X'
 
     let bodyNode = make('div')
@@ -46,10 +53,14 @@ const makePopup = (title, description, closeCallback = function(e){}) => {
     popupNode.appendChild(vhr)
     popupNode.appendChild(bodyNode)
 
-    popups += 1;
     return popupNode;
 }
 
+
+//specific functions
+function btnHoverSound() {
+    playAudio(`audio/menu-hover3.wav`)
+}
 
 window.onload = function() {
     document.getElementById('popupblur').appendChild(makePopup(
@@ -57,8 +68,8 @@ window.onload = function() {
         'This site is not yet finished, and may not work properly.'+
         '<br>(press/click X to dismiss)'+
         '<hr style="opacity:2%">'+
-        '<span style="opacity:15%">For more information, contact me on Discord: Aw Man#3646'+
-        '<br>and Twitter (or X, whatever you wanna call it): @Aw_Man3704</span>',
+        '<span style="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
+        '<br>and Twitter (or X, whatever you wanna call it) - @Aw_Man3704</span>',
         function(_) {
             const e = document.getElementById('popupblur')
             e.style.opacity = '0%';
