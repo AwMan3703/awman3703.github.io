@@ -27,6 +27,9 @@ const makePopup = (title, description, closeCallback = function(_){}) => {
     xNode.classList = 'pointer secondary-text'
     xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
     xNode.style.fontSize = 'xxx-large'
+    xNode.setAttribute('onmousedown', 'this.style.fontSize = \"10rem\"')
+    xNode.setAttribute('onmouseover', 'this.style.fontSize = \"4rem\"')
+    xNode.setAttribute('onmouseout', 'this.style.fontSize = \"xxx-large"')
     xNode.onclick = closePopup
     xNode.innerText = 'X'
 
