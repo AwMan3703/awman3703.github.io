@@ -1,3 +1,4 @@
+// GRRRR MOBILE BAD RAWRR
 
 function check() {
     const w = visualViewport.width
