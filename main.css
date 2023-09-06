@@ -107,33 +107,32 @@ li:last-child { border: none; }
 .menu-item:last-child {
     border: none;
 }
+.menu-item::before, .menu-item::after {
+    position: absolute;
+    display: inline-block;
+    transition: inherit;
+}
 .menu-item::before {
-    background-image: url('img/icons/file_colour_simple.svg');
+    left: 4%;
     width: 25px;
     aspect-ratio: 1;
-    display: inline-block;
-    margin-inline-end: 5%;
+    background-image: url('img/icons/file_colour_simple.svg');
     filter: drop-shadow(-4px 4px 6px #090b14);
     content: "";
-    position: absolute;
-    left: 5%; /* Adjust as needed */
-    top: 50%; /* Vertically center the pseudo-element */
-    transform: translateY(-50%);
 }
 .menu-item::after {
-    display: inline-block;
-    margin-inline-start: 5%;
+    right: 4%;
     color: var(--color-text-secondary);
+    opacity: 50%;
     font-weight: 100;
     font-size: small;
     text-transform: none;
-    opacity: 50%;
     content: "/folder";
-    position: absolute;
-    right: 5%;
-    top: 50%; /* Vertically center the ::after content */
-    transform: translateY(-50%);
 }
+
+.menu:hover > .menu-item { color: var(--color-text-secondary); border-color: #00000000; }
+.menu:hover > .menu-item::before { background-image: url('img/icons/file.svg'); opacity: 50%; }
+.menu:hover > .menu-item::after { content: "//"; }
 
 .menu-item:hover {
     background-color: var(--color-bg-element);
@@ -142,14 +141,11 @@ li:last-child { border: none; }
     color: var(--color-text-main) !important;
 }
 .menu-item:hover::before { background-image: url('img/icons/file_colour.svg') !important; opacity: 100% !important; }
-.menu-item:hover::after { font-size: large; content: "root/folder >"; }
+.menu-item:hover::after { font-size: medium; content: "root/folder >" !important; }
 
-.menu:hover > .menu-item { color: var(--color-text-secondary); border-color: #00000000; }
-.menu:hover > .menu-item::before { background-image: url('img/icons/file.svg'); opacity: 50%; }
-
-.menu-item:active { padding-inline: 5%; }
-.menu-item:active::before { background-image: url('img/icons/file.svg') !important; }
-.menu-item:active::after { content: "cd ./folder"; }
+.menu-item:active { font-size: large; }
+.menu-item:active::before { left: 7%; background-image: url('img/icons/file.svg') !important; }
+.menu-item:active::after { right: 7%; content: "cd ./folder" !important; }
 
 .popup {
     align-items: center;
