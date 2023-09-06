@@ -5,14 +5,13 @@ const getId = () => { ids_counter += 1; return ids_counter; }
 const make = (tag) => { return document.createElement(tag); }
 const getExt = (path) => { return path.split('.').pop(); }
 
-
 //generic functions
 const playAudio = (path) => {
     const audio = new Audio(path);
     audio.play();
 }
 
-const makePopup = (title, description, closeCallback = function(e){}) => {
+const makePopup = (title, description, closeCallback = function(_){}) => {
     let popupId = `popup_${getId()}`
     let closePopup = () => {
         const e = document.getElementById(popupId)
@@ -56,7 +55,6 @@ const makePopup = (title, description, closeCallback = function(e){}) => {
     return popupNode;
 }
 
-
 //specific functions
 function btnHoverSound() {
     playAudio(`audio/menu-hover3.wav`)
@@ -77,6 +75,7 @@ window.onload = function() {
         }
         ))
 };
+
 
 
 
