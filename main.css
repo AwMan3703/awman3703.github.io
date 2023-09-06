@@ -99,6 +99,7 @@ li:last-child { border: none; }
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--color-bg-element);
+    font-size: x-large;
     text-transform: capitalize;
     cursor: pointer;
 }
@@ -117,6 +118,7 @@ li:last-child { border: none; }
     margin-inline-start: 5%;    
     color: var(--color-text-secondary);
     font-weight: 100;
+    font-size: small;
     text-transform: none;
     opacity: 50%;
     content: "/folder";
@@ -126,14 +128,13 @@ li:last-child { border: none; }
     background-color: var(--color-bg-element);
     transform: translateX(.5%);
     border-radius: 12px;
+    color: var(--color-text-main) !important;
 }
-.menu-item > a { font-size: 1.5em; }
-.menu:hover > .menu-item > a { color: var(--color-text-secondary); }
-.menu-item:hover > a { color: var(--color-text-main) !important; }
-.menu:hover > .menu-item { border-color: #00000000; }
-.menu:hover > .menu-item::before { background-image: url('img/icons/file.svg'); opacity: 50%; }
 .menu-item:hover::before { background-image: url('img/icons/file_colour.svg') !important; opacity: 100% !important; }
-.menu-item:hover::after { content: "root/folder >"; }
+.menu-item:hover::after { font-size: large; content: "root/folder >"; }
+
+.menu:hover > .menu-item { color: var(--color-text-secondary); border-color: #00000000; }
+.menu:hover > .menu-item::before { background-image: url('img/icons/file.svg'); opacity: 50%; }
 
 .menu-item:active { padding-inline: 5%; }
 .menu-item:active::before { background-image: url('img/icons/file.svg') !important; }
