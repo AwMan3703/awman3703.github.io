@@ -96,15 +96,18 @@ li:last-child { border: none; }
 .menu-item {
     padding: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: center; /* Vertically center the content */
     border-bottom: 2px solid var(--color-bg-element);
     font-size: x-large;
     text-transform: capitalize;
     cursor: pointer;
+    position: relative; /* For positioning pseudo-elements */
 }
-.menu-item:last-child { border: none; }
-.menu-item::before{
+.menu-item:last-child {
+    border: none;
+}
+.menu-item::before {
     background-image: url('img/icons/file_colour_simple.svg');
     width: 25px;
     aspect-ratio: 1;
@@ -112,18 +115,26 @@ li:last-child { border: none; }
     margin-inline-end: 5%;
     filter: drop-shadow(-4px 4px 6px #090b14);
     content: "";
+    position: absolute;
+    left: 5%; /* Adjust as needed */
+    top: 50%; /* Vertically center the pseudo-element */
+    transform: translateY(-50%);
 }
-.menu-item::after{
+.menu-item::after {
     display: inline-block;
-    margin-inline-start: 5%;    
+    margin-inline-start: 5%;
     color: var(--color-text-secondary);
     font-weight: 100;
     font-size: small;
     text-transform: none;
     opacity: 50%;
     content: "/folder";
-    position: relative;
+    position: absolute;
+    right: 5%;
+    top: 50%; /* Vertically center the ::after content */
+    transform: translateY(-50%);
 }
+
 .menu-item:hover {
     background-color: var(--color-bg-element);
     transform: translateX(.5%);
