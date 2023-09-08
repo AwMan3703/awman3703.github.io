@@ -15,11 +15,13 @@ function discriminate() {
         '</p>'+
         ''
     }
+    console.log("mobile discrimination completed")
 }
 
 function mobileDiscrimination() {
+    discriminate();
+
     window.addEventListener("resize", () => {
-        console.log("mobile discrimination got here")
         discriminate()
     })
 }

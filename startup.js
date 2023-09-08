@@ -7,5 +7,5 @@ window.onload = function() {
     compile_elements();
 
     //
-    mobileDiscrimination()
+    mobileDiscrimination();
 };
