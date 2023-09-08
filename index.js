@@ -6,8 +6,9 @@ const make = (tag) => { return document.createElement(tag); }
 const getExt = (path) => { return path.split('.').pop(); }
 
 //generic functions
-const playAudio = (path) => {
+const playAudio = (path, volumePercentage) => {
     const audio = new Audio(path);
+    audio.volume = volumePercentage / 100;
     audio.play();
 }
 
@@ -57,27 +58,6 @@ const makePopup = (title, description, closeCallback = function(_){}) => {
 
     return popupNode;
 }
-
-//specific functions
-function btnHoverSound() {
-    playAudio(`audio/menu-hover3.wav`)
-}
-
-window.onload = function() {
-    document.getElementById('popupblur').appendChild(makePopup(
-        'Work in progress :)',
-        'This site is not yet finished, and may not work properly.'+
-        '<br>(press/click X to dismiss)'+
-        '<hr style="opacity:2%">'+
-        '<span style="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
-        '<br>and Twitter (or X, whatever you wanna call it) - @Aw_Man3704</span>',
-        function(_) {
-            const e = document.getElementById('popupblur')
-            e.style.opacity = '0%';
-            e.remove()
-        }
-        ))
-};
 
 
 

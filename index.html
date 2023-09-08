@@ -6,8 +6,10 @@
 
         <link rel="stylesheet" href="main.css">
 
-        <script src="mobile-discrimination.js"></script>
         <script src="index.js"></script>
+        <script src="mobile-discrimination.js"></script>
+        <script src="compile-classes.js"></script>
+        <script src="startup.js"></script>
     </head>
     <body class="any-screen">
         <!--ACTUAL BODY-->
@@ -17,14 +19,30 @@
             </div>
             
             <!--Main content-->
-            <header role="header" class="center-items">
-                <div class="menu rounded2 border">
-                    <a href="#" onmouseenter="btnHoverSound()" class="menu-item">about</a>
-                    <a href="#" onmouseenter="btnHoverSound()" class="menu-item">skills</a>
-                    <a href="#" onmouseenter="btnHoverSound()" class="menu-item">projects</a>
-                    <a href="#" onmouseenter="btnHoverSound()" class="menu-item">contact</a>
+            <header role="header" class="center-items vertical">
+                <h1 id="main-title">Aw Man3703's portfolio</h1>
+                <div id="mein-menu" class="menu rounded2 border">
+                    <a href="#section-about" class="menu-item button-sound" data-text="about">about</a>
+                    <a href="#section-skills" class="menu-item button-sound" data-text="skills">skills</a>
+                    <a href="#section-projects" class="menu-item button-sound" data-text="projects">projects</a>
+                    <a href="#section-contact" class="menu-item button-sound" data-text="contact">contact</a>
                 </div>
             </header>
+            <section id="section-about">
+                <h1>about me</h1>
+                <div class="menu rounded2 border">
+                    <a href="#" class="menu-item secondary-text href-top button-sound" data-text="">..</a>
+                </div>
+            </section>
+            <section id="section-skills">
+                <h1>skills</h1>
+            </section>
+            <section id="section-projects">
+                <h1>past projects</h1>
+            </section>
+            <section id="section-contact">
+                <h1>how to contact</h1>
+            </section>
         </main>
     </body>
 </html>

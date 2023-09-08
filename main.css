@@ -1,4 +1,17 @@
 
+@font-face {
+    font-family: "sono";
+    src: url("font/sono/web/Sono-Regular.woff2");
+}
+@font-face {
+    font-family: "consola mono";
+    src: url("font/consola_mono/ConsolaMono-Book.ttf");
+}
+@font-face {
+    font-family: "consola mono bold";
+    src: url("font/consola_mono/ConsolaMono-Bold.ttf");
+}
+
 :root {
     --font-main: monospace;
 
@@ -18,6 +31,7 @@
 
 * {
     user-select: none;
+    overflow-x: hidden;
     font-family: var(--font-main);
     color: var(--color-text-main);
     max-width: 100vw !important;
@@ -32,12 +46,35 @@ body {
     background-image: radial-gradient(circle, var(--color-bg-gradient-1) 30%, var(--color-bg-gradient-2) 100%);
 }
 
+h1, h2, h3, h4, h5 {
+    margin: 0px;
+    text-transform: capitalize;
+}
+
 header {
-    padding: 10px;
+    height: 100vh;
+}
+
+section {
+    margin-block-start: 20vh;
+    height: 100vh;
+}
+section > h1 {
+    font-family: "consola mono bold";
+}
+section > h1::before, section > h1::after {
+    color: var(--color-bg-element);
+    font-family: "sono";
+}
+section > h1::before {
+    content: "aw_man@";
+}
+section > h1::after {
+    content: " ~ %";
 }
 
 hr { opacity: 10%; }
-hr.vertical{ 
+hr.vertical {
     border:         none;
     border-left:    2px solid;
     height:         100vh;
@@ -67,8 +104,8 @@ li:last-child { border: none; }
 
 .full-width { width: 100% }
 .full-height { height: 100% }
-.vertical { display: block; }
-.horizontal { display: flex; }
+.vertical { display: block; flex-direction: column; }
+.horizontal { display: flex; flex-direction: row; }
 .center-items { 
     display: flex;
     justify-content: center;
@@ -89,7 +126,7 @@ li:last-child { border: none; }
 .pointer { cursor: pointer; }
 
 .glassmorphism {
-    backdrop-filter: blur(12px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(25, 24, 32, 0.5);
     border: var(--default-border-style);
@@ -139,7 +176,7 @@ li:last-child { border: none; }
     font-weight: 100;
     font-size: small;
     text-transform: none;
-    content: "/folder";
+    content: "/" attr(data-text);
 }
 
 .menu:hover > .menu-item { color: var(--color-text-secondary); border-color: #00000000; }
@@ -152,11 +189,11 @@ li:last-child { border: none; }
     color: var(--color-text-main);
 }
 .menu-item:hover::before { left: 5%; background-image: url('img/icons/file_colour.svg') !important; opacity: 100% !important; }
-.menu-item:hover::after { right: 5%; font-size: medium; content: "root/folder >" !important; }
+.menu-item:hover::after { right: 5%; font-size: medium; content: "root/" attr(data-text) " >" !important; }
 
 .menu-item:active { font-size: large; }
 .menu-item:active::before { left: 6%; background-image: url('img/icons/file.svg') !important; }
-.menu-item:active::after { right: 6%; content: "cd ./folder" !important; }
+.menu-item:active::after { right: 6%; content: "cd ./" attr(data-text) !important; }
 
 .popup {
     align-items: center;
@@ -164,6 +201,11 @@ li:last-child { border: none; }
     padding-inline: 20px;
 }
 
+
+#main-title {
+    font-size: 7vh;
+    margin-bottom: 4vh;
+}
 
 
 #popupblur {
