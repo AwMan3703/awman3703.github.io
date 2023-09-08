@@ -18,8 +18,8 @@ function discriminate() {
 }
 
 function mobileDiscrimination() {
-    console.log("mobile discrimination got here")
     window.addEventListener("resize", () => {
+        console.log("mobile discrimination got here")
         discriminate()
     })
 }
