@@ -12,6 +12,10 @@ function playAudio(path, volumePercentage) {
     audio.play();
 }
 
+function scrollToTop() {
+    document.body.scrollTo(0,0);
+}
+
 function makePopup(title, description, closeCallback = function(_){}) {
     let popupId = `popup_${getId()}`
     let closePopup = () => {
