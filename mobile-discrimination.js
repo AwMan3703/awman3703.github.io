@@ -12,14 +12,14 @@ function discriminate() {
         document.body.innerHTML = '<p style="font-size: 10vh;">'+
         '<h1>Imagine trying to view this on mobile</h1>'+
         '<h3>Cringe</h3>'+
-        ''+
+        '</p>'+
         ''
     }
 }
 
 function mobileDiscrimination() {
+    console.log("mobile discrimination got here")
     window.addEventListener("resize", () => {
         discriminate()
-        console.log("mobile discrimination complete")
     })
 }
