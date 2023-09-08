@@ -17,7 +17,9 @@ function discriminate() {
     }
 }
 
-window.addEventListener("resize", () => {
-    discriminate()
-    console.log("mobile discrimination complete")
-})
+function mobileDiscrimination() {
+    window.addEventListener("resize", () => {
+        discriminate()
+        console.log("mobile discrimination complete")
+    })
+}
