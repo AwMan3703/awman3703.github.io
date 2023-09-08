@@ -6,10 +6,14 @@ function compile(className, compileFunction) {
     }
 }
 
+//-------------------------//
+
 function btnHoverSound() {
-    playAudio(`audio/menu-hover3.wav`, 20)
+    playAudio('audio/menu-hover3.wav', 20)
 }
 
-window.onload = () => {
-    compile('button-sound', (e) => { e.onmouseenter = btnHoverSound; console.log(e) })
+//-------------------------//
+
+function compile_elements() {
+    compile('button-sound', (e) => { e.onmouseenter = btnHoverSound; })
 }
