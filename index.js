@@ -6,12 +6,17 @@ const make = (tag) => { return document.createElement(tag); }
 const getExt = (path) => { return path.split('.').pop(); }
 
 //generic functions
-const playAudio = (path) => {
+function playAudio(path, volumePercentage) {
     const audio = new Audio(path);
+    audio.volume = volumePercentage / 100;
     audio.play();
 }
 
-const makePopup = (title, description, closeCallback = function(_){}) => {
+function scrollToTop() {
+    document.body.scrollTo(0,0);
+}
+
+function makePopup(title, description, closeCallback = function(_){}) {
     let popupId = `popup_${getId()}`
     let closePopup = () => {
         const e = document.getElementById(popupId)
@@ -27,6 +32,9 @@ const makePopup = (title, description, closeCallback = function(_){}) => {
     xNode.classList = 'pointer secondary-text'
     xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
     xNode.style.fontSize = 'xxx-large'
+    xNode.setAttribute('onmousedown', 'this.style.fontSize = \"10rem\"')
+    xNode.setAttribute('onmouseover', 'this.style.fontSize = \"4rem\"')
+    xNode.setAttribute('onmouseout', 'this.style.fontSize = \"xxx-large"')
     xNode.onclick = closePopup
     xNode.innerText = 'X'
 
@@ -56,14 +64,10 @@ const makePopup = (title, description, closeCallback = function(_){}) => {
 }
 
 //specific functions
-function btnHoverSound() {
-    playAudio(`audio/menu-hover3.wav`)
-}
-
-window.onload = function() {
+function startupPopup() {
     document.getElementById('popupblur').appendChild(makePopup(
-        'Work in progress :)',
-        'This site is not yet finished, and may not work properly.'+
+        'Work suspended :(',
+        'This site is not yet finished, and may not work properly. I have suspended development as i am busy on a commission, will return to it shortly!'+
         '<br>(press/click X to dismiss)'+
         '<hr style="opacity:2%">'+
         '<span style="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
@@ -73,9 +77,8 @@ window.onload = function() {
             e.style.opacity = '0%';
             e.remove()
         }
-        ))
-};
-
+    ))
+}
 
 
 
