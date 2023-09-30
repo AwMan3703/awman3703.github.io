@@ -66,8 +66,8 @@ function makePopup(title, description, closeCallback = function(_){}) {
 //specific functions
 function startupPopup() {
     document.getElementById('popupblur').appendChild(makePopup(
-        'Work suspended :(',
-        'This site is not yet finished, and may not work properly. I have suspended development as i am busy on a commission, will return to it shortly!'+
+        'Work in progress :)',
+        'This site is not yet finished, and may not work properly!'+
         '<br>(press/click X to dismiss)'+
         '<hr style="opacity:2%">'+
         '<span style="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
