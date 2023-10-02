@@ -4,6 +4,14 @@
     src: url("font/sono/web/Sono-Regular.woff2");
 }
 @font-face {
+    font-family: "hack";
+    src: url("font/hack/Hack-Regular.ttf");
+}
+@font-face {
+    font-family: "hack bold";
+    src: url("font/hack/Hack-Bold.ttf");
+}
+@font-face {
     font-family: "consola mono";
     src: url("font/consola_mono/ConsolaMono-Book.ttf");
 }
@@ -13,7 +21,8 @@
 }
 
 :root {
-    --font-main: monospace;
+    --font-default: monospace;
+    --font-main: "hack";
 
     --color-text-main: white;
     --color-text-secondary: #d9dafd9f;
@@ -32,6 +41,7 @@
 * {
     user-select: none;
     overflow-x: hidden;
+    font-family: var(--font-default);
     font-family: var(--font-main);
     color: var(--color-text-main);
     max-width: 100vw !important;
@@ -45,6 +55,8 @@ body {
     background-color: var(--color-bg-body);
     background-image: radial-gradient(circle, var(--color-bg-gradient-1) 30%, var(--color-bg-gradient-2) 100%);
 }
+
+p { font-family: "hack"; }
 
 h1, h2, h3, h4, h5 {
     margin: 0;
@@ -163,7 +175,7 @@ li:last-child { border: none; }
 
 .section-title {
     font-size: 5vh;
-    font-family: "consola mono bold";
+    font-family: "hack bold";/*"consola mono bold";*/
     margin: 5vh;
 }
 .section-title::before, .section-title::after {
@@ -179,7 +191,7 @@ li:last-child { border: none; }
 
 .big-title {
     font-size: 5vh;
-    font-family: "consola mono bold";
+    font-family: "hack bold";/*"consola mono bold";*/
 }
 
 .header {
@@ -275,7 +287,8 @@ article > .card {
 
 
 #main-title {
-    font-size: 7vh;
+    font-family: "hack bold";
+    font-size: 12vh;
     margin-bottom: 4vh;
 }
 
