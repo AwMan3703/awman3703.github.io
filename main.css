@@ -245,7 +245,7 @@ li:last-child { border: none; }
 
 .menu:hover > .menu-item {
     color: var(--color-text-secondary);
-    border-color: #00000000;
+    border: none;
     filter: blur(1px);
 }
 .menu:hover > .menu-item::before { background-image: url('img/icons/file.svg'); opacity: 50%; }
@@ -253,8 +253,8 @@ li:last-child { border: none; }
 
 .menu-item:hover {
     background-color: var(--color-bg-element);
+    color: var(--color-text-main) !important;
     border-radius: 12px;
-    color: var(--color-text-main);
     filter: blur(0px) !important;
     box-shadow: rgba(0, 0, 0, 0.75) 0 0 20px 10px;
 }
@@ -300,6 +300,12 @@ article > .card {
 }
 #main-title:hover {
     color: #f8dfae;
+}
+
+#about-text { color: var(--color-text-secondary) }
+#about-text::first-line {
+    color: var(--color-text-main);
+    background-color: var(--color-text-secondary);
 }
 
 #popup-blur {

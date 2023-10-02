@@ -1,7 +1,7 @@
 
 //utility
 let ids_counter = 0
-const getId = () => { ids_counter += 1; return ids_counter; }
+const getId = (name) => { ids_counter += 1; return name + "_" + ids_counter; }
 const make = (tag) => { return document.createElement(tag); }
 const getExt = (path) => { return path.split('.').pop(); }
 
@@ -17,7 +17,7 @@ function scrollToTop() {
 }
 
 function makePopup(title, description, closeCallback = function(_){}) {
-    let popupId = `popup_${getId()}`
+    let popupId = getId("popup")
     let closePopup = () => {
         const e = document.getElementById(popupId)
         e.remove()
@@ -32,9 +32,9 @@ function makePopup(title, description, closeCallback = function(_){}) {
     xNode.classList = 'pointer secondary-text'
     xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
     xNode.style.fontSize = 'xxx-large'
-    xNode.setAttribute('onmousedown', 'this.style.fontSize = \"10rem\"; this.style.opacity = 0')
-    xNode.setAttribute('onmouseover', 'this.style.fontSize = \"4rem\"')
-    xNode.setAttribute('onmouseout', 'this.style.fontSize = \"xxx-large\"')
+    xNode.setAttribute('onmousedown', 'this.style.fontSize = "10rem"; this.style.opacity = 0')
+    xNode.setAttribute('onmouseover', 'this.style.fontSize = "4rem"')
+    xNode.setAttribute('onmouseout', 'this.style.fontSize = "xxx-large"')
     xNode.onclick = closePopup
     xNode.innerText = 'X'
 
