@@ -176,14 +176,15 @@ li:last-child { border: none; }
     margin: 5vh;
 }
 .section-title::before, .section-title::after {
-    color: var(--color-bg-element);
+    color: var(--color-text-secondary);
+    opacity: 40%;
     font-family: "sono";
 }
 .section-title::before {
-    content: "aw_man@";
+    content: "aw_man@ ";
 }
 .section-title::after {
-    content: "$"; /*" ~ %";*/
+    content: " –$"; /*" ~ %";*/
 }
 
 .big-title {
