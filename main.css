@@ -184,7 +184,7 @@ li:last-child { border: none; }
     content: "aw_man@ ";
 }
 .section-title::after {
-    content: " –$"; /*" ~ %";*/
+    content: " –$"; /*" –%";*/
 }
 
 .big-title {
