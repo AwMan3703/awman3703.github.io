@@ -66,6 +66,14 @@ h1, h2, h3, h4, h5 {
     text-transform: capitalize;
 }
 
+span.unimportant-text {
+    color: inherit;
+    font: inherit;
+    text-decoration: inherit;
+    text-shadow: inherit;
+    opacity: 35%;
+}
+
 header {
     height: 100vh;
 }
@@ -109,10 +117,12 @@ hr.vertical {
 
 a {
     cursor: pointer;
-    text-decoration: none;
 }
 a:hover {
-    color: aqua !important;
+    color: aqua;
+}
+.menu a {
+    text-decoration: none;
 }
 
 ul, ol {    
