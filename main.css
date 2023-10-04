@@ -56,15 +56,14 @@ body {
     background-image: radial-gradient(circle, var(--color-bg-gradient-1) 30%, var(--color-bg-gradient-2) 100%);
 }
 
-p { font-family: "hack"; }
+p {
+    font-family: "hack";
+    line-height: 130%;
+}
 
 h1, h2, h3, h4, h5 {
     margin: 0;
     text-transform: capitalize;
-}
-
-p.big-text, h1.big-text, h2.big-text, h3.big-text, h4.big-text, h5.big-text {
-    font-size: large;
 }
 
 header {
@@ -192,6 +191,10 @@ li:last-child { border: none; }
     font-family: "hack bold";/*"consola mono bold";*/
 }
 
+.big-text {
+    font-size: large;
+}
+
 .header {
     padding-block-start: 5vh;
 }
@@ -281,12 +284,11 @@ li:last-child { border: none; }
     display: flex;
     justify-content: start;
     gap: 20px;
-    padding-inline: 20px;
+    padding: 20px;
     background-color: var(--color-bg-element);
 }
 article > .card {
     width: 65%;
-    padding-block: 20px;
     /*height: 65vh;*/
 }
 
