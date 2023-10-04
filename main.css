@@ -73,7 +73,7 @@ header {
 
 section {
     margin-block-start: 20vh;
-    /*height: 100vh;*/
+    min-height: 100vh;
 }
 
 article {
@@ -125,20 +125,18 @@ li {
 
     text-align: center;
     transform-style: preserve-3d;
-    transform: translateX(-14%);
+    /*transform: translateX(-14%);*/
 }
 li:last-child { border: none; }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 0.4vw;
 }
-
 ::-webkit-scrollbar-track {
-    background: #ffffff3a;
+    background: var(--color-bg-element);
 }
-
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: var(--color-fg-element);
     border-radius: 20px;
 }
 
@@ -286,8 +284,9 @@ li:last-child { border: none; }
     background-color: var(--color-bg-element);
 }
 article > .card {
-    width: 50%;
-    height: 65vh;
+    width: 65%;
+    padding-block: 20px;
+    /*height: 65vh;*/
 }
 
 
