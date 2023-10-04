@@ -73,7 +73,7 @@ header {
 
 section {
     margin-block-start: 20vh;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 article {
@@ -185,7 +185,7 @@ li:last-child { border: none; }
     content: "aw_man@";
 }
 .section-title::after {
-    content: " ~ %";
+    content: "$"; /*" ~ %";*/
 }
 
 .big-title {
@@ -306,6 +306,8 @@ article > .card {
 #about-text::first-line {
     color: var(--color-text-main);
     background-color: var(--color-text-secondary);
+    font-size: larger;
+    line-height: 200%;
 }
 
 #popup-blur {
