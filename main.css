@@ -108,8 +108,11 @@ hr.vertical {
 }
 
 a {
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    color: aqua !important;
 }
 
 ul, ol {    
