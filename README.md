@@ -11,6 +11,6 @@
 - [ ] portfolio "Skills" section `W.I.P.`
 - [ ] portfolio "Projects" section
 - [ ] portfolio "Contact" section
-- [ ] move portfolio in subfolder to use Pages for other projects too
+- [ ] move portfolio in subfolder to use Github Pages for other projects too
 - [ ] create an index.html page to navigate between subfolders (projects)
 - [ ] upload a bunch of silly HTML/CSS/JS projects i have laying around
