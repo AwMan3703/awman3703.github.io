@@ -32,9 +32,9 @@ function makePopup(title, description, closeCallback = function(_){}) {
     xNode.classList = 'pointer secondary-text'
     xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
     xNode.style.fontSize = 'xxx-large'
-    xNode.setAttribute('onmousedown', 'this.style.fontSize = "10rem"; this.style.opacity = 0')
-    xNode.setAttribute('onmouseover', 'this.style.fontSize = "4rem"')
-    xNode.setAttribute('onmouseout', 'this.style.fontSize = "xxx-large"')
+    xNode.setAttribute('onmousedown', 'this.css.fontSize = "10rem"; this.css.opacity = 0')
+    xNode.setAttribute('onmouseover', 'this.css.fontSize = "4rem"')
+    xNode.setAttribute('onmouseout', 'this.css.fontSize = "xxx-large"')
     xNode.onclick = closePopup
     xNode.innerText = 'X'
 
@@ -69,8 +69,8 @@ function startupPopup() {
         'Work in progress :)',
         'This site is not yet finished, and may not work properly!'+
         '<br>(press/click X to dismiss)'+
-        '<hr style="opacity:2%">'+
-        '<span style="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
+        '<hr css="opacity:2%">'+
+        '<span css="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
         '<br>and Twitter (or X, whatever you want to call it) - @Aw_Man3704</span>',
         function(_) {
             const e = document.getElementById('popup-blur')

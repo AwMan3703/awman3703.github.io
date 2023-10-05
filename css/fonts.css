@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: "sono";
+    src: url("../resources/font/sono/web/Sono-Regular.woff2");
+}
+@font-face {
+    font-family: "hack";
+    src: url("../resources/font/hack/Hack-Regular.ttf");
+}
+@font-face {
+    font-family: "hack bold";
+    src: url("../resources/font/hack/Hack-Bold.ttf");
+}
+@font-face {
+    font-family: "consola mono";
+    src: url("../resources/font/consola_mono/ConsolaMono-Book.ttf");
+}
+@font-face {
+    font-family: "consola mono bold";
+    src: url("../resources/font/consola_mono/ConsolaMono-Bold.ttf");
+}
