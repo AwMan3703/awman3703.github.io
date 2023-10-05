@@ -7,8 +7,8 @@
 ### TODO
 - [x] create portfolio page
 - [x] implement portfolio sections navigation
->- [ ] portfolio "About" section `// W.I.P.`
-- [ ] portfolio "Skills" section
+- [x] portfolio "About" section
+- [ ] portfolio "Skills" section `W.I.P.`
 - [ ] portfolio "Projects" section
 - [ ] portfolio "Contact" section
 - [ ] move portfolio in subfolder to use pages for other projects too
