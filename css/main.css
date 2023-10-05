@@ -317,11 +317,17 @@ li:last-child { border: none; }
     font-family: "hack bold";
     font-size: 12vh;
     margin-bottom: 4vh;
-    background-image: linear-gradient(90deg, #0081ff, #ff004d);
+
+    background-color: rgb(67, 67, 130);
+    background-image: linear-gradient(90deg, #23d5ab, #23a6d5, #e73c7e, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23a6d5, #e73c7e, #ee7752, #e73c7e, #23a6d5);
+    background-size: 240% 100%;
+    background-repeat: repeat;
     color: transparent;
-}
-#main-title:hover {
-    color: #f8dfae;
+
+    animation: title-gradient 3s linear infinite;
+    -webkit-animation: title-gradient 3s linear infinite;
+    -moz-animation: title-gradient 3s linear infinite;
+    -o-animation: title-gradient 3s linear infinite;
 }
 
 #about-text { color: var(--color-text-secondary) }

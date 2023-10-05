@@ -69,8 +69,8 @@ function startupPopup() {
         'Work in progress :)',
         'This site is not yet finished, and may not work properly!'+
         '<br>(press/click X to dismiss)'+
-        '<hr css="opacity:2%">'+
-        '<span css="opacity:15%">For more information, contact me on Discord - Aw Man#3646'+
+        '<hr style="opacity:2%">'+
+        '<span class="unimportant-text">For more information, contact me on Discord - Aw Man#3646'+
         '<br>and Twitter (or X, whatever you want to call it) - @Aw_Man3704</span>',
         function(_) {
             const e = document.getElementById('popup-blur')
