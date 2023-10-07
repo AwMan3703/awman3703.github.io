@@ -15,6 +15,12 @@
 
     --default-border-radius: 12px;
     --default-border-style: 1px solid rgba(255, 255, 255, 0.125);
+
+    /*--------*/
+
+    --title-gradient-1: rgb(232, 195, 48);
+    --title-gradient-2: rgb(61, 61, 255);
+    --title-gradient-blend: rgb(255, 79, 39);
 }
 
 * {
@@ -312,20 +318,20 @@ li:last-child { border: none; }
 
     background-color: transparent;
     background-image: linear-gradient(90deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.4),
-        whitesmoke,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.4),
-        whitesmoke,
-        rgba(255, 255, 255, 0.4)
+        var(--title-gradient-1),
+        var(--title-gradient-blend),
+        var(--title-gradient-2),
+        var(--title-gradient-blend),
+        var(--title-gradient-1),
+        var(--title-gradient-blend),
+        var(--title-gradient-2),
+        var(--title-gradient-blend)
     );
     background-size: 238% 100%;
     background-repeat: repeat;
     color: transparent;
 
-    animation: title-gradient 12s linear infinite;
+    animation: title-gradient 20s linear infinite;
 }
 
 #article-about > .card {

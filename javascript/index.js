@@ -32,16 +32,16 @@ function makePopup(title, description, closeCallback = function(_){}) {
     xNode.classList = 'pointer secondary-text'
     xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
     xNode.style.fontSize = 'xxx-large'
-    xNode.setAttribute('onmousedown', 'this.css.fontSize = "10rem"; this.css.opacity = 0')
-    xNode.setAttribute('onmouseover', 'this.css.fontSize = "4rem"')
-    xNode.setAttribute('onmouseout', 'this.css.fontSize = "xxx-large"')
+    xNode.setAttribute('onmousedown', 'this.style.fontSize = "10rem"; this.style.opacity = 0')
+    xNode.setAttribute('onmouseover', 'this.style.fontSize = "4rem"')
+    xNode.setAttribute('onmouseout', 'this.style.fontSize = "xxx-large"')
     xNode.onclick = closePopup
     xNode.innerText = 'X'
 
     let bodyNode = make('div')
     bodyNode.classList = 'vertical'
 
-    let titleNode = make('h1')
+    let titleNode = make('h1');
     titleNode.innerHTML = title;
 
     let descNode = make('p')
