@@ -325,7 +325,7 @@ li:last-child { border: none; }
     background-repeat: repeat;
     color: transparent;
 
-    animation: title-gradient 3s linear infinite;
+    animation: title-gradient 12s linear infinite;
 }
 
 #article-about > .card {
