@@ -347,8 +347,21 @@ li:last-child { border: none; }
     line-height: 200%;
 }
 
+#article-skills {
+    overflow: visible;
+}
+#skills-wrapper {
+    overflow: visible;
+}
+#skills-list {
+    overflow: visible;
+}
 #skills-list > .card {
     background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.3));
+}
+#skills-list > .card:hover {
+    transform: rotateY(180deg) rotate(5deg) scale(200%);
+    z-index: 100;
 }
 
 #popup-blur {
