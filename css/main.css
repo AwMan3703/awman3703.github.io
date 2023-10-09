@@ -301,14 +301,17 @@ li:last-child { border: none; }
 .card {
     display: flex;
     justify-content: start;
-    width: 10%;
     aspect-ratio: 1;
-    gap: 20px;
     padding: 20px;
     background-color: var(--color-bg-element);
 }
 .flex-wrap > .card {
     margin-bottom: 2%;
+}
+.card-wrapper {
+    display: flex;
+    width: 10%;
+    overflow: visible;
 }
 
 #main-title {
@@ -356,12 +359,12 @@ li:last-child { border: none; }
 #skills-list {
     overflow: visible;
 }
-#skills-list > .card {
+#skills-list .card {
     background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.3));
 }
-#skills-list > .card:hover {
+#skills-list > .card-wrapper:hover > .card {
     transform: rotateY(180deg) rotate(5deg) scale(200%);
-    z-index: 100;
+    z-index: 999;
 }
 
 #popup-blur {
