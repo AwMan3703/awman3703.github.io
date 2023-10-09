@@ -1,5 +1,5 @@
 # awman3703.github.io
-**The repository for my github page**
+**The repository for my github pages**
 (So far, still a work in progress)
 > [!NOTE]
 > I only work on this in my free time, it might take a while to complete
