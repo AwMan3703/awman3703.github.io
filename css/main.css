@@ -17,11 +17,7 @@
     --default-border-radius: 12px;
     --default-border-style: 1px solid rgba(255, 255, 255, 0.125);
 
-    /*--------*/
-
-    --title-gradient-1: rgb(232, 195, 48);
-    --title-gradient-2: rgb(61, 61, 255);
-    --title-gradient-blend: rgb(255, 79, 39);
+    --default-transition-duration: .15s;
 }
 
 * {
@@ -31,7 +27,7 @@
     font-family: var(--font-main);
     color: var(--color-text-main);
     max-width: 100vw !important;
-    transition: all .15s !important;
+    transition: all var(--default-transition-duration);
 }
 
 body {
@@ -193,7 +189,7 @@ li:last-child { border: none; }
     content: "aw_man@";
 }
 .section-title::after {
-    content: "–$"; /*"–%";*/
+    content: "-$"; /*"-%";*/
 }
 
 .big-title {
@@ -301,7 +297,7 @@ li:last-child { border: none; }
 
 .card {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     aspect-ratio: inherit;
     padding: 20px;
     background-color: var(--color-bg-element);
@@ -310,27 +306,30 @@ li:last-child { border: none; }
     margin-bottom: 10%;
 }
 .card-wrapper {
-    display: flex;
     aspect-ratio: 1;
     width: 10%;
     overflow: visible;
 }
 
 #main-title {
+    --gradient-1: rgb(255, 200, 0);
+    --gradient-2: rgb(224, 61, 255);
+    --gradient-blend: rgb(255, 47, 0);
+
     font-family: "hack bold";
     font-size: 12vh;
     margin-bottom: 4vh;
 
     background-color: transparent;
     background-image: linear-gradient(90deg,
-        var(--title-gradient-1),
-        var(--title-gradient-blend),
-        var(--title-gradient-2),
-        var(--title-gradient-blend),
-        var(--title-gradient-1),
-        var(--title-gradient-blend),
-        var(--title-gradient-2),
-        var(--title-gradient-blend)
+        var(--gradient-1),
+        var(--gradient-blend),
+        var(--gradient-2),
+        var(--gradient-blend),
+        var(--gradient-1),
+        var(--gradient-blend),
+        var(--gradient-2),
+        var(--gradient-blend)
     );
     background-size: 238% 100%;
     background-repeat: repeat;
@@ -352,21 +351,38 @@ li:last-child { border: none; }
     line-height: 200%;
 }
 
-#article-skills {
-    overflow: visible;
-}
-#skills-wrapper {
-    overflow: visible;
-}
+#article-skills,
+#skills-wrapper,
 #skills-list {
     overflow: visible;
 }
 #skills-list .card {
-    background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.3));
+    --bg-image: linear-gradient(135deg, transparent 50%, rgba(57, 75, 119, 0.34));
+    background-image: var(--bg-image);
+    color: #00000000;
+    text-indent: -50rem;
+    transition: all var(--default-transition-duration), text-indent 0s !important;
+}
+#skills-list .card:before {
+    background-image: url("../resources/img/images/page/pfp.jpeg");
+    min-width: 100%;
+    min-height: 100%;
+    align-self: baseline;
+    content: "";
 }
 #skills-list > .card-wrapper:hover > .card {
-    transform: rotateY(180deg) rotate(5deg) scale(200%);
+    transform: rotateY(180deg) rotate(3deg) scale(200%) scale(-1, 1);
+    min-height: max-content;
     z-index: 999;
+    color: inherit;
+    text-indent: 0px;
+}
+#skills-list > .card-wrapper:hover > .card:before {
+    min-width: 30%;
+    height: 30%;
+    min-height: 30%;
+    height: 30%;
+    display: none;
 }
 
 #popup-blur {

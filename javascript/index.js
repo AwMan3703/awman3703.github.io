@@ -80,5 +80,13 @@ function startupPopup() {
     ))
 }
 
+// This function does not work, as rotate(attr(*)) isn't a thing in CSS yet
+function randomizeSkillCardsRotation() {
+    const targets = document.querySelectorAll("#skills-list .skill-card");
+
+    for (const target of targets) {
+        target.dataset["hoverRotation"] = Math.ceil((Math.random() * 10 / 2)).toString() + "deg";
+    }
+}
 
 
