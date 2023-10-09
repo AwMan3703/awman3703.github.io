@@ -302,15 +302,16 @@ li:last-child { border: none; }
 .card {
     display: flex;
     justify-content: start;
-    aspect-ratio: 1;
+    aspect-ratio: inherit;
     padding: 20px;
     background-color: var(--color-bg-element);
 }
-.flex-wrap > .card {
-    margin-bottom: 2%;
+.flex-wrap .card {
+    margin-bottom: 10%;
 }
 .card-wrapper {
     display: flex;
+    aspect-ratio: 1;
     width: 10%;
     overflow: visible;
 }
