@@ -217,7 +217,7 @@ li:last-child { border: none; }
 .menu {
     min-width: 15vw;
     margin: 0;
-    padding: .5%;
+    padding: 7px;
     font-weight: bold;
 }
 .menu-item {
