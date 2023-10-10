@@ -237,9 +237,6 @@ li:last-child { border: none; }
 .menu-item:last-child {
     border: none;
 }
-.menu-item:not(a) {
-    opacity: 50%;
-}
 .menu-item::before, .menu-item::after {
     position: absolute;
     display: inline-block;
@@ -263,14 +260,14 @@ a.menu-item::before {
     content: "/" attr(data-text);
 }
 
-a.menu:hover > .menu-item {
+.menu:hover > .menu-item {
     color: var(--color-text-secondary);
     filter: blur(1px);
 }
-a.menu:hover > .menu-item::before { background-image: url('../resources/img/icons/file.svg'); opacity: 50%; }
-a.menu:hover > .menu-item::after { content: "//"; }
+.menu:hover > .menu-item::before { background-image: url('../resources/img/icons/file.svg'); opacity: 50%; }
+.menu:hover > .menu-item::after { content: "//"; }
 
-a.menu-item:hover {
+.menu-item:hover {
     background-color: var(--color-bg-element);
     color: var(--color-text-main) !important;
     border-radius: 12px;
@@ -278,12 +275,12 @@ a.menu-item:hover {
     filter: blur(0px) !important;
     box-shadow: rgba(0, 0, 0, 0.75) 0 0 20px 10px;
 }
-a.menu-item:hover::before { left: 5%; background-image: url('../resources/img/icons/file_colour.svg') !important; opacity: 100% !important; }
-a.menu-item:hover::after { right: 5%; font-size: medium; content: "./" attr(data-text) " >" !important; }
+.menu-item:hover::before { left: 5%; background-image: url('../resources/img/icons/file_colour.svg') !important; opacity: 100% !important; }
+.menu-item:hover::after { right: 5%; font-size: medium; content: "./" attr(data-text) " >" !important; }
 
-a.menu-item:active { font-size: large; }
-a.menu-item:active::before { left: 6%; background-image: url('../resources/img/icons/file.svg') !important; }
-a.menu-item:active::after { right: 6%; content: "cd ./" attr(data-text) !important; }
+.menu-item:active { font-size: large; }
+.menu-item:active::before { left: 6%; background-image: url('../resources/img/icons/file.svg') !important; }
+.menu-item:active::after { right: 6%; content: "cd ./" attr(data-text) !important; }
 
 .pfp {
     aspect-ratio: 1 / 1;
