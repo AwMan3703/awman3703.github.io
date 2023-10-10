@@ -361,7 +361,7 @@ li:last-child { border: none; }
     background-image: var(--bg-image);
     color: #00000000;
     text-indent: -50rem;
-    transition: all var(--default-transition-duration), text-indent 0s !important;
+    transition: all var(--default-transition-duration) ease-in, text-indent 0s !important;
 }
 #skills-list .card:before {
     background-image: url("../resources/img/images/page/pfp.jpeg");
@@ -373,7 +373,6 @@ li:last-child { border: none; }
 #skills-list > .card-wrapper:hover > .card {
     transform: rotateY(180deg) rotate(3deg) scale(200%) scale(-1, 1);
     min-height: max-content;
-    z-index: 999;
     color: inherit;
     text-indent: 0px;
 }
