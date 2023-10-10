@@ -45,7 +45,7 @@ p {
 
 h1, h2, h3, h4, h5 {
     margin: 0;
-    text-transform: capitalize;
+    text-transform: full-size-kana;
 }
 
 span.unimportant-text {
@@ -357,14 +357,16 @@ li:last-child { border: none; }
     overflow: visible;
 }
 #skills-list .card {
-    --bg-image: linear-gradient(135deg, transparent 50%, rgba(57, 75, 119, 0.34));
-    background-image: var(--bg-image);
+    background-image: linear-gradient(135deg, transparent 50%, rgba(57, 75, 119, 0.34));
     color: #00000000;
     text-indent: -50rem;
     transition: all var(--default-transition-duration) ease-in, text-indent 0s !important;
 }
 #skills-list .card:before {
-    background-image: url("../resources/img/images/page/pfp.jpeg");
+    background-image: url("../resources/img/icons/no_access.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
     min-width: 100%;
     min-height: 100%;
     align-self: baseline;
@@ -378,7 +380,7 @@ li:last-child { border: none; }
 }
 #skills-list > .card-wrapper:hover > .card:before {
     min-width: 30%;
-    height: 30%;
+    width: 30%;
     min-height: 30%;
     height: 30%;
     display: none;

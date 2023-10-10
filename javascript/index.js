@@ -89,4 +89,11 @@ function randomizeSkillCardsRotation() {
     }
 }
 
+function setSkillCardsIcons() {
+    const targets = document.querySelectorAll("#skills-list .skill-card");
 
+    for (const target of targets) {
+        const before = window.getComputedStyle(target, ":before");
+        before.backgroundImage = "url(" + target.dataset["iconUrl"] + ")";
+    }
+}
