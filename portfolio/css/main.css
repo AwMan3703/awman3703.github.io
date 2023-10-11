@@ -5,7 +5,7 @@
     --font-main: "hack";
 
     --color-text-main: white;
-    --color-text-secondary: #d9dafd9f;
+    --color-text-secondary: rgba(217, 218, 253, 0.35);
 
     --color-bg-body: #10131d;
     --color-bg-gradient-1: #0b0c11;
@@ -231,9 +231,6 @@ li:last-child { border: none; }
     cursor: pointer;
     position: relative;
 }
-.main-menu-item {
-    padding-block: 15px;
-}
 .menu-item:last-child {
     border: none;
 }
@@ -242,7 +239,7 @@ li:last-child { border: none; }
     display: inline-block;
     transition: inherit;
 }
-a.menu-item::before {
+.menu-item::before {
     left: 4%;
     width: 25px;
     aspect-ratio: 1;
@@ -260,12 +257,12 @@ a.menu-item::before {
     content: "/" attr(data-text);
 }
 
-.menu:hover > .menu-item {
+.menu:hover:has(> .menu-item:hover) > .menu-item {
     color: var(--color-text-secondary);
     filter: blur(1px);
 }
-.menu:hover > .menu-item::before { background-image: url('../resources/img/icons/file.svg'); opacity: 50%; }
-.menu:hover > .menu-item::after { content: "//"; }
+.menu:hover:has(> .menu-item:hover) > .menu-item::before { background-image: url('../resources/img/icons/file.svg'); opacity: 50%; }
+.menu:hover:has(> .menu-item:hover) > .menu-item::after { content: "//"; }
 
 .menu-item:hover {
     background-color: var(--color-bg-element);
@@ -281,6 +278,35 @@ a.menu-item::before {
 .menu-item:active { font-size: large; }
 .menu-item:active::before { left: 6%; background-image: url('../resources/img/icons/file.svg') !important; }
 .menu-item:active::after { right: 6%; content: "cd ./" attr(data-text) !important; }
+
+.menu-item-static {
+    padding-block: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: var(--default-border-style);
+    font-size: x-large;
+    color: var(--color-text-secondary);
+}
+.menu-item-static:last-child {
+    border: none;
+}
+.menu-item-static::after {
+    position: absolute;
+    display: inline-block;
+    transition: inherit;
+    right: 4%;
+    color: var(--color-text-secondary);
+    opacity: 50%;
+    font-weight: 100;
+    font-size: small;
+    text-transform: none;
+    content: "...";
+}
+
+.main-menu-item {
+    padding-block: 15px;
+}
 
 .pfp {
     aspect-ratio: 1 / 1;

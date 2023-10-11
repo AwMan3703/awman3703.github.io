@@ -94,6 +94,7 @@ function setSkillCardsIcons() {
 
     for (const target of targets) {
         const before = window.getComputedStyle(target, ":before");
-        before.backgroundImage = "url(" + target.dataset["iconUrl"] + ")";
+        console.log(before);
+        // = "url(" + target.dataset["iconUrl"] + ")";
     }
 }
