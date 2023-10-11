@@ -20,19 +20,22 @@ function makePopup(title, description, closeCallback = function(_){}) {
     let popupId = getId("popup")
     let closePopup = () => {
         const e = document.getElementById(popupId)
+        e.style.width = "100vw";
+        e.style.opacity = "0%";
         e.remove()
         closeCallback(e)
     }
 
     let popupNode = make('div')
     popupNode.id = popupId
-    popupNode.classList = 'popup horizontal glassmorphism rounded'
+    popupNode.classList = 'horizontal glassmorphism material-border rounded'
+    popupNode.style = "align-items: center; gap: 20px; padding: 20px;"
 
     let xNode = make('div')
     xNode.classList = 'pointer secondary-text'
     xNode.style.fontFamily = '\'Courier New\', Courier, monospace;'
     xNode.style.fontSize = 'xxx-large'
-    xNode.setAttribute('onmousedown', 'this.style.fontSize = "10rem"; this.style.opacity = 0')
+    xNode.setAttribute('onmousedown', 'this.style.fontSize = "10rem"')
     xNode.setAttribute('onmouseover', 'this.style.fontSize = "4rem"')
     xNode.setAttribute('onmouseout', 'this.style.fontSize = "xxx-large"')
     xNode.onclick = closePopup
@@ -93,8 +96,6 @@ function setSkillCardsIcons() {
     const targets = document.querySelectorAll("#skills-list .skill-card");
 
     for (const target of targets) {
-        const before = window.getComputedStyle(target, ":before");
-        console.log(before);
-        // = "url(" + target.dataset["iconUrl"] + ")";
+        target.backgroundImage = "url(" + target.dataset["iconUrl"] + ")";
     }
 }

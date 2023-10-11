@@ -45,7 +45,9 @@ p {
 
 h1, h2, h3, h4, h5 {
     margin: 0;
-    text-transform: full-size-kana;
+}
+h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter {
+    text-transform: capitalize;
 }
 
 span.unimportant-text {
@@ -161,9 +163,7 @@ li:last-child { border: none; }
 .rounded2 { border-radius: calc(var(--default-border-radius) * 1.5); }
 .rounded3 { border-radius: calc(var(--default-border-radius) * 2); }
 
-.border {
-    border: var(--default-border-style);
-}
+.border { border: var(--default-border-style); }
 
 .secondary-text { color: var(--color-text-secondary); }
 
@@ -172,7 +172,11 @@ li:last-child { border: none; }
 .glassmorphism {
     backdrop-filter: blur(25px) saturate(180%);
     background-color: rgba(25, 24, 32, 0.75);
-    border: var(--default-border-style);
+}
+.material-border {
+    box-shadow:
+            0 0.5px 0 0px rgba(255, 255, 255, 0.2) inset,
+            0 0 0 0.5px rgba(0, 0, 0, 0.7);
 }
 
 .section-title {
@@ -291,18 +295,6 @@ li:last-child { border: none; }
 .menu-item-static:last-child {
     border: none;
 }
-.menu-item-static::after {
-    position: absolute;
-    display: inline-block;
-    transition: inherit;
-    right: 4%;
-    color: var(--color-text-secondary);
-    opacity: 50%;
-    font-weight: 100;
-    font-size: small;
-    text-transform: none;
-    content: "...";
-}
 
 .main-menu-item {
     padding-block: 15px;
@@ -313,12 +305,6 @@ li:last-child { border: none; }
     border-radius: 50%;
     border: var(--default-border-style);
     outline-offset: 10px;
-}
-
-.popup {
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
 }
 
 .card {
@@ -339,7 +325,7 @@ li:last-child { border: none; }
 
 #main-title {
     --gradient-1: rgb(255, 200, 0);
-    --gradient-2: rgb(224, 61, 255);
+    --gradient-2: rgb(255 61 175);
     --gradient-blend: rgb(255, 47, 0);
 
     font-family: "hack bold";
@@ -383,23 +369,18 @@ li:last-child { border: none; }
     overflow: visible;
 }
 #skills-list .card {
-    background-image: linear-gradient(135deg, transparent 50%, rgba(57, 75, 119, 0.34));
+    --bg-gradient: linear-gradient(135deg, transparent 50%, rgba(39, 55, 93, 0.26));
+    background: var(--bg-gradient) center no-repeat, url("../resources/img/icons/no_access.svg") center no-repeat;
+    background-color: var(--color-bg-element);
+
     color: #00000000;
     text-indent: -50rem;
     transition: all var(--default-transition-duration) ease-in, text-indent 0s !important;
 }
-#skills-list .card:before {
-    background-image: url("../resources/img/icons/no_access.svg");
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 100%;
-    min-height: 100%;
-    align-self: baseline;
-    content: "";
-}
 #skills-list > .card-wrapper:hover > .card {
-    transform: rotateY(180deg) rotate(3deg) scale(200%) scale(-1, 1);
+    background-color: var(--color-bg-element);
+    background-image: var(--bg-gradient);
+    transform: rotateY(180deg) rotate(2deg) scale(200%) scale(-1, 1);
     min-height: max-content;
     color: inherit;
     text-indent: 0px;

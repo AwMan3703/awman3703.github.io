@@ -16,7 +16,7 @@ function compileByClass(className, compileFunction) {
 //-------------------------//
 
 function btnHoverSound() {
-    playAudio('audio/menu-hover3.wav', 20)
+    playAudio('../resources/audio/menu-hover3.wav', 20)
 }
 
 //-------------------------//
