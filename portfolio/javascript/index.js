@@ -96,6 +96,7 @@ function setSkillCardsIcons() {
     const targets = document.querySelectorAll("#skills-list .skill-card");
 
     for (const target of targets) {
-        target.backgroundImage = "url(" + target.dataset["iconUrl"] + ")";
+        target.style.backgroundImage = "url(" + target.getAttribute("data-iconurl") + ")";
+        target.style.backgroundRepeat = "no-repeat";
     }
 }
