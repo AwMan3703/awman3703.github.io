@@ -1,5 +1,5 @@
 
-function compileByCustomFilter(filter, compileFunction) {
+function compileByFilter(filter, compileFunction) {
     const elements = document.querySelectorAll('*');
     for (const e of elements) {
         if ( filter(e) ) { compileFunction(e); }
@@ -24,7 +24,7 @@ function btnHoverSound() {
 function compile_elements() {
     compileByClass('button-sound',
         (e) => { e.onmouseenter = btnHoverSound; })
-    compileByCustomFilter(
-        (e)=>{ return (typeof(e.href)=="string" ? e.href.slice(-5) : "")=="[top]" },
-        (e)=>{ e.setAttribute('onclick', 'scrollToTop()'); e.href="#" } )
+    compileByFilter(
+        (e)=>{ return (typeof(e.href)=="string" ? e.href.slice(-5) : "")==="[top]" },
+        (e)=>{ e.setAttribute('onclick', 'scrollToTop()'); e.href="#" })
 }

@@ -46,6 +46,7 @@ function makePopup(title, description, closeCallback = function(_){}) {
 
     let titleNode = make('h1');
     titleNode.innerHTML = title;
+    titleNode.style.margin = '0';
 
     let descNode = make('p')
     descNode.classList = 'secondary-text'
@@ -66,7 +67,7 @@ function makePopup(title, description, closeCallback = function(_){}) {
     return popupNode;
 }
 
-//specific functions
+// ----- // specific functions // ----- //
 function startupPopup() {
     document.getElementById('popup-blur').appendChild(makePopup(
         'Work in progress :)',
@@ -83,20 +84,11 @@ function startupPopup() {
     ))
 }
 
-// This function does not work, as rotate(attr(*)) isn't a thing in CSS yet
-function randomizeSkillCardsRotation() {
-    const targets = document.querySelectorAll("#skills-list .skill-card");
-
-    for (const target of targets) {
-        target.dataset["hoverRotation"] = Math.ceil((Math.random() * 10 / 2)).toString() + "deg";
-    }
-}
-
 function setSkillCardsIcons() {
     const targets = document.querySelectorAll("#skills-list .skill-card");
 
     for (const target of targets) {
-        target.style.backgroundImage = "url(" + target.getAttribute("data-iconurl") + ")";
+        target.style.backgroundImage = target.style.backgroundImage + ("url(" + target.getAttribute("data-iconurl") + ")");
         target.style.backgroundRepeat = "no-repeat";
     }
 }

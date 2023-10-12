@@ -44,7 +44,6 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-    margin: 0;
 }
 h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter {
     text-transform: capitalize;
@@ -65,6 +64,7 @@ header {
 section {
     margin-block-start: 20vh;
     min-height: 100vh;
+    overflow: unset;
 }
 
 article {
@@ -334,7 +334,10 @@ li:last-child { border: none; }
 .card-wrapper {
     aspect-ratio: 1;
     width: 10vw;
+    height: 10vw;
+    margin-bottom: 2vh;
     overflow: visible;
+    border-radius: var(--default-border-radius);
 }
 
 #main-title {
@@ -389,34 +392,32 @@ li:last-child { border: none; }
     background-color: var(--color-bg-element);
 
     overflow-y: hidden;
-    color: #00000000;
-    text-indent: -50rem;
-    transition: all var(--default-transition-duration) ease-in, text-indent 0s !important;
+    color: transparent;
+    font-size: 0;
+    transition: all var(--default-transition-duration) ease-in, font-size 0s !important;
 }
 #skills-list .card::-webkit-scrollbar { display: none; }
-#skills-list > .card-wrapper:hover > .card {
+#skills-list .card:first-line { color: var(--color-text-main) !important; }
+#skills-list .card:first-line:first-letter { text-transform: capitalize; }
+#skills-list .card-wrapper { background-color: var(--color-fg-element); }
+#skills-list .card-wrapper:hover:not(:active) { box-shadow: 0 0 20px 10px var(--color-fg-element); }
+#skills-list .card-wrapper:active > .card {
     background-color: var(--color-bg-element);
     background-image: var(--bg-gradient) !important;
     background-size: 100%;
 
     aspect-ratio: unset;
-    width: fit-content;
+    width: 150%;
     display: block;
     overflow-y: scroll;
 
-    transform: rotateY(180deg) rotate(2deg) scale(200%) scale(-1, 1);
+    transform: rotateY(180deg) rotate(2deg) scale(-1, 1) scale(200%) translate(20%, 20%);
     color: var(--color-text-secondary);
-    text-indent: 0px;
+    font-size: unset;
 }
-#skills-list .card-wrapper:hover > .card:before {
-    min-width: 30%;
-    width: 30%;
-    min-height: 30%;
-    height: 30%;
-    display: none;
+#skills-list .card h1 {
+    margin-block-start: 0;
 }
-#skills-list .card:first-line { color: var(--color-text-main) !important; }
-#skills-list .card:first-line:first-letter { text-transform: capitalize; }
 
 #popup-blur {
     position: fixed;
