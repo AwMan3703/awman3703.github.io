@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"/><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"/><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: $$$/GeneralStr/196=Adobe Illustrator 27.6.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1572B6;}
+	.st1{fill:#3387DC;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#EBEBEB;}
+</style>
+<path class="st0" d="M18.8,114.1L8.8,1.4h110.5l-10.1,112.8l-45.2,12.5C63.9,126.6,18.8,114.1,18.8,114.1z"/>
+<path class="st1" d="M64,117.1l36.6-10.1l8.6-96.4H64C64,10.6,64,117.1,64,117.1z"/>
+<path class="st2" d="M64,51.4h18.3l1.3-14.2H64V23.4h34.7l-0.3,3.7L95,65.3H64C64,65.3,64,51.4,64,51.4z"/>
+<path class="st3" d="M64.1,87.3L64.1,87.3l-15.5-4.1l-1-11H33.8l1.9,21.7l28.3,7.9l0.1,0V87.3z"/>
+<path class="st2" d="M81.1,64.7l-1.7,18.5L64,87.4v14.4l28.4-7.9l0.2-2.3L95,64.7H81.1z"/>
+<path class="st3" d="M64,23.4v13.8H30.6l-0.3-3.1l-0.6-7l-0.3-3.7C29.4,23.4,64,23.4,64,23.4z M64,51.4v13.8H48.8l-0.3-3.1l-0.6-7
+	l-0.3-3.7H64z"/>
+</svg>

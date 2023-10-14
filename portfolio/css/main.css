@@ -45,7 +45,11 @@ p {
 
 h1, h2, h3, h4, h5 {
 }
-h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter {
+h1:first-letter:not([style~="text-transform: none"]),
+h2:first-letter:not([style~="text-transform: none"]),
+h3:first-letter:not([style~="text-transform: none"]),
+h4:first-letter:not([style~="text-transform: none"]),
+h5:first-letter:not([style~="text-transform: none"]) {
     text-transform: capitalize;
 }
 
@@ -218,6 +222,11 @@ li:last-child { border: none; }
     -webkit-background-clip: text;
 }
 
+.faded-left {
+    mask-image: linear-gradient(90deg, transparent, black);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black);
+}
+
 .menu {
     min-width: 15vw;
     margin: 0;
@@ -278,7 +287,7 @@ li:last-child { border: none; }
 }
 .menu-item:hover::before {
     left: 5%; background-image: url('../resources/img/icons/file_colour.svg') !important;
-    opacity: 100% !important;
+    opacity: 1 !important;
 }
 .menu-item:hover::after {
     right: 5%;
@@ -385,23 +394,24 @@ li:last-child { border: none; }
 #skills-list {
     overflow: visible;
 }
-#skills-list .card {
+#skills-list .skill-card {
     --bg-gradient: radial-gradient(transparent 50%, rgba(39, 55, 93, 0.26));
     background: var(--bg-gradient) center, url("../resources/img/icons/no_access.svg") center no-repeat;
-    background-size: 50%;
+    background-size: 60%;
     background-color: var(--color-bg-element);
 
+    min-height: -webkit-fill-available;
     overflow-y: hidden;
     color: transparent;
     font-size: 0;
     transition: all var(--default-transition-duration) ease-in, font-size 0s !important;
 }
-#skills-list .card::-webkit-scrollbar { display: none; }
-#skills-list .card:first-line { color: var(--color-text-main) !important; }
-#skills-list .card:first-line:first-letter { text-transform: capitalize; }
+#skills-list .skill-card::-webkit-scrollbar { display: none; }
+#skills-list .skill-card:first-line { color: var(--color-text-main) !important; }
+#skills-list .skill-card:first-line:first-letter { text-transform: capitalize; }
 #skills-list .card-wrapper { background-color: var(--color-fg-element); }
-#skills-list .card-wrapper:hover:not(:active) { box-shadow: 0 0 20px 10px var(--color-fg-element); }
-#skills-list .card-wrapper:active > .card {
+#skills-list .card-wrapper:hover:not(:active) { box-shadow: 0 0 60px 10px var(--color-fg-element); }
+#skills-list .card-wrapper:active > .skill-card {
     background-color: var(--color-bg-element);
     background-image: var(--bg-gradient) !important;
     background-size: 100%;
@@ -412,11 +422,27 @@ li:last-child { border: none; }
     overflow-y: scroll;
 
     transform: rotateY(180deg) rotate(2deg) scale(-1, 1) scale(200%) translate(20%, 20%);
+    position: relative;
+    z-index: 999;
+    
     color: var(--color-text-secondary);
     font-size: unset;
 }
-#skills-list .card h1 {
+#skills-list .skill-card h1 {
     margin-block-start: 0;
+}
+
+#secondary-skills-list {
+    justify-content: space-evenly;
+    gap: 2%;
+}
+#secondary-skills-list .secondary-skill-card {
+    min-width: 4%;
+    opacity: 50%;
+}
+#secondary-skills-list .secondary-skill-card:hover {
+    opacity: 1;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 #popup-blur {
