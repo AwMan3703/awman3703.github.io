@@ -8,8 +8,8 @@
 - [x] create portfolio page
 - [x] implement portfolio sections navigation
 - [x] portfolio "About" section
-- [ ] portfolio "Skills" section `W.I.P.`
-- [ ] portfolio "Projects" section
+- [x] portfolio "Skills" section
+- [ ] portfolio "Projects" section `W.I.P.`
 - [ ] portfolio "Contact" section
 - [x] move portfolio in sub-folder to use GitHub Pages for other projects too
 - [x] create an index.html page to navigate between sub-folders (projects)

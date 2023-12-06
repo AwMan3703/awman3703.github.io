@@ -1,0 +1,6 @@
+@media only screen and (max-width: 500px) {
+    .menu-item::before,
+    .menu-item::after {
+        display: none;
+    }
+}
