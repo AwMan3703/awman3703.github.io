@@ -2,30 +2,275 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Aw Man3703 v0.6.8-dev</title>
         <meta charset="utf-8" lang="en">
         <meta name="theme-color" content="#000000">
         <meta name="description" content="Aw Man3703's portfolio">
 
-        <link rel="stylesheet" href="index_css/fonts.css">
-        <link rel="stylesheet" href="index_css/animations.css">
-        <link rel="stylesheet" href="index_css/main.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        
+        <script src="javascript/index.js"></script>
+        <script src="javascript/compile-elements.js"></script>
+        <script src="javascript/mobile-discrimination.js"></script>
+        <script src="javascript/startup.js"></script>
 
-        <link rel="shortcut icon" href="index_resources/img/icons/faviconv1.ico" type="image/x-icon">
+        <title>Aw Man3703 v0.6.8-dev</title>
+        <link rel="shortcut icon" href="resources/img/icons/faviconv2.ico" type="image/x-icon">
     </head>
     <body class="any-screen">
+        <!--ACTUAL BODY-->
         <main class="hide-mobile">
+            <!--Popup to warn that the site is incomplete-->
+            <div id="popup-blur">
+            </div>
+            
             <!--Main content-->
             <header role="banner" class="center-items vertical">
-                <h1 id="main-title" class="text-image">Whoops!</h1>
-                <h1>Seems like you got somewhere you weren't supposed to be :/</h1>
-                <h2 class="secondary-text">Maybe you were looking for one of these?</h2>
+                <h1 id="main-title" class="text-image">Aw_Man3703</h1>
                 <div class="menu main-menu rounded2 border" style="width: 50%;">
-                    <a href="portfolio/" class="menu-item main-menu-item button-sound" data-text="portfolio/">My portfolio</a>
-                    <a href="cat/" class="menu-item main-menu-item button-sound" data-text="cat/">A cat</a>
-                    <span class="menu-item-static main-menu-item">Other projects coming soon!</span>
+                    <span class="main-menu-item menu-item-static">Take a look at my experience!</span>
+                    <a href="#section-about" class="menu-item main-menu-item button-sound" data-text="about/">about</a>
+                    <a href="#section-skills" class="menu-item main-menu-item button-sound" data-text="skills/">skills</a>
+                    <a href="#section-projects" class="menu-item main-menu-item button-sound" data-text="projects/">projects</a>
+                    <span class="main-menu-item menu-item-static">...or get in touch:</span>
+                    <a href="#section-contact" class="menu-item main-menu-item button-sound" data-text="contact/">contact</a>
                 </div>
             </header>
+            <section id="section-about">
+                <div class="horizontal align-center">
+                    <h1 class="section-title">about</h1>
+                    <div class="menu rounded2 border">
+                        <a href="[top]" class="menu-item secondary-text href-top button-sound" data-text="">..</a>
+                    </div>
+                </div>
+
+                <!--ABOUT SECTION-->
+                <article id="article-about">
+                    <div class="card align-center rounded border">
+                        <img src="resources/img/images/page/pfp.jpeg" alt="Aw_Man3703" class="pfp medium" style="margin-inline-end: 2%">
+
+                        <hr class="vertical">
+
+                        <div style="margin-inline-start: 2%">
+                            <h2 class="secondary-text big-title" style="opacity: 25%">Hi, I'm Aw_Man3703</h2>
+                            <p id="about-text" class="big-text text-image" style="background-image: linear-gradient(315deg, #9e1e1e, #161696)">
+                                I am a freelance developer,
+                                <br>
+                                I work mainly on
+                                <span>frontend</span>
+                                (native / web apps, video-games and such, usually working on
+                                <span>User Interface</span>
+                                and
+                                <span>User Experience</span>),
+                                but I can also easily create a
+                                <span>backend</span> for your project, or even
+                                <span>full-stack</span>
+                                applications.
+                                <br><br>
+                                I started coding at 14, with
+                                <span style="color: rgb(235,84,38)">HTML</span>,
+                                <span style="color: rgb(71,107,245)">CSS</span>
+                                and
+                                <span style="color: #dac852">JavaScript</span>,
+                                and then, after a few months, I began learning some actual programming languages, such as
+                                <span style="color: rgb(233,125,23)">Java</span>,
+                                <span style="color: rgb(133,98,183)">C#</span>,
+                                <span style="color: rgb(80,130,192)">C++</span>,
+                                <span style="color: rgb(183,37,79)">Rust</span>,
+                                <span style="color: rgb(250,129,15)">Swift</span>
+                                and many others.
+                                <br>
+                                I also create
+                                <span style="color: rgb(91,145,201)">Python</span>,
+                                <span style="color: rgb(77,76,239)">Lua</span>
+                                and even
+                                <span title="Minecraft's scripting language" style="color: rgb(89,203,89);">mcfunction</span>
+                                scripts!
+                                <br><br>
+                                I have worked on
+                                <span>Web Applications</span>
+                                (with React.js and) and native apps for
+                                <span>iOS</span>,
+                                <span>Android</span>,
+                                <span>macOS</span>
+                                and
+                                <span>Windows</span>.
+                                <br>
+                                I have been hired for bounties on
+                                <a href="https://replit.com/@AwMan3703">Replit.com</a>,
+                                and, when working on a project, I am reliable and efficient, giving you
+                                my best product.
+                                <br><br>
+                                By the way, I am also studying in the
+                                <span>Graphic design</span>
+                                and
+                                <span>Editing</span>
+                                field, and can produce graphic assets, illustrations, logos, banners,
+                                edit images, and create 3D models, using the most popular software
+                                (<span style="color: rgb(113,181,255)">Photoshop</span>,
+                                <span style="color: rgb(253,136,9)">Adobe Illustrator</span>,
+                                <span style="color: rgb(251,18,83)">InDesign</span>,
+                                <span style="color: rgb(215,100,13)">Blender</span>,
+                                <span style="color: rgb(58,167,211)">Maya</span>
+                                and more).
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+            <section id="section-skills">
+                <div class="horizontal align-center">
+                    <h1 class="section-title">Skills and languages</h1>
+                    <div class="menu rounded2 border">
+                        <a href="[top]" class="menu-item secondary-text href-top button-sound" data-text="">..</a>
+                    </div>
+                </div>
+
+                <!--SKILLS SECTION-->
+                <article id="article-skills">
+                    <div id="skills-wrapper" class="vertical full-width-margin padding">
+                        <h2 class="secondary-text" style="margin-block-start: 0">Here are the main technologies I know:</h2>
+                        <div class="horizontal" style="overflow: visible">
+                            <div id="skills-list" class="flex-wrap">
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/html5.svg">
+                                    <h1>Html</h1>
+                                    I create well-structured and responsive pages, that work on any device.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/css3.svg">
+                                    <h1>Css</h1>
+                                    I can create modern and beautiful style sheets, compatible with any browser.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/javascript.svg">
+                                    <h1>Javascript</h1>
+                                    Anything you can dream of, I can achieve with Javascript.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/php.svg">
+                                    <h1>Php</h1>
+                                    I can easily implement backends and response pages with PHP.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/python.svg">
+                                    <h1>Python</h1>
+                                    I have been scripting stuff in python for a long time.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/java.svg">
+                                    <h1>Java</h1>
+                                    I use Java to create native apps, algorithms and Minecraft mods.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/swift.svg">
+                                    <h1>Swift</h1>
+                                    I can easily create iOS and macOS applications using Swift.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/csharp.svg">
+                                    <h1>C#</h1>
+                                    I have made quite a few WPF apps and Unity scripts in C#.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/cplusplus.svg">
+                                    <h1>C++</h1>
+                                    I create command line tools using C++ for maximum efficiency and low-level control.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/rust.svg">
+                                    <h1>Rust</h1>
+                                    I have also made some command-line projects in Rust.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/react.svg">
+                                    <h1>React.js</h1>
+                                    I create efficient, well-structured and easy-to-use React applications.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/node.svg">
+                                    <h1>Node.js</h1>
+                                    I can make a strong backend for your website with Node.
+                                </div>
+                            </div>
+                            <div class="card-wrapper">
+                                <div class="skill-card material-border card rounded" data-iconurl="resources/img/images/page/technologies1/next.svg">
+                                    <h1>Next.js</h1>
+                                    This is my favourite React framework for making web applications.
+                                </div>
+                            </div>
+                        </div>
+                            <div id="code-background" style="width: 100%; display: flex; justify-content: center">
+                                <img class="faded-left" src="resources/img/images/page/background_code.svg">
+                            </div>
+                        </div>
+                        <h2 class="secondary-text" style="text-transform: none">...and here are some more I use:</h2>
+                        <div id="secondary-skills-list" class="card material-border rounded">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/discordjs.svg" alt="Discord.JS" title="Discord.JS bots">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/electron.svg" alt="Electron" title="Electron apps">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/git.svg" alt="Git" title="Git version control">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/github.svg" alt="GitHub" title="GitHub vcs">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/godot.svg" alt="Godot" title="Godot game development">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/haxe.svg" alt="Haxe" title="Haxe game development">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/illustrator.svg" alt="Illustrator" title="SVG graphic design">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/photoshop.svg" alt="Photoshop" title="Raster image editing">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/jetbrains.svg" alt="Jetbrains" title="Jetbrains IDEs">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/lua.svg" alt="Lua" title="Lua scripting">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/mongodb.svg" alt="MongoDB" title="MongoDB integration">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/npm.svg" alt="Npm" title="NPM tool">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/codepen.svg" alt="Codepen" title="Codepen">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/objectivec.svg" alt="Objective-C" title="Objective-C programming">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/chrome.svg" alt="Chrome" title="Chrome extensions">
+                            <img class="secondary-skill-card" src="resources/img/images/page/technologies2/opengl.svg" alt="OpenGL" title="OpenGL graphics">
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+            <section id="section-projects">
+                <div class="horizontal align-center">
+                    <h1 class="section-title">My projects</h1>
+                    <div class="menu rounded2 border">
+                        <a href="[top]" class="menu-item secondary-text href-top button-sound" data-text="">..</a>
+                    </div>
+                </div>
+
+                <!--PROJECTS SECTION-->
+                <article id="article-projects">
+                    WIP
+                </article>
+
+            </section>
+            <section id="section-contact">
+                <div class="horizontal align-center">
+                    <h1 class="section-title">Contact me</h1>
+                    <div class="menu rounded2 border">
+                        <a href="[top]" class="menu-item secondary-text href-top button-sound" data-text="">..</a>
+                    </div>
+                </div>
+
+                <!--CONTACT SECTION-->
+                <article id="article-contact">
+                    WIP
+                </article>
+
+            </section>
+
+            <a href="cat/index.html">cat</a>
         </main>
     </body>
 </html>
