@@ -1,0 +1,23 @@
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 500px;
+}
+#main-image {
+  width: 50%;
+  margin-block-start: 50px;
+  animation: spin 5s linear infinite;
+}
+/*# sourceMappingURL=style.css.map */
