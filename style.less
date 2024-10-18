@@ -3,11 +3,8 @@
 	from {
 		transform: rotateY(0deg);
 	}
-	50% {
-		transform: rotateY(180deg);
-	}
 	to {
-		transform: rotateY(360deg);
+		transform: rotateY(359.9deg);
 	}
 }
 
@@ -16,11 +13,12 @@ body {
 	flex-direction: column;
 	align-items: center;
 
-	perspective: 500px;
+	perspective: 1000px;
 }
 
 #main-image {
 	width: 50%;
+	max-width: 200px;
 	margin-block-start: 50px;
 
 	animation: spin 5s linear infinite;
