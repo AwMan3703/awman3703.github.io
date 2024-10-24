@@ -1,9 +1,0 @@
-
-@keyframes title-gradient {
-    0% {
-        background-position-x: 100%;
-    }
-    100% {
-        background-position-x: 0%;
-    }
-}
