@@ -1,0 +1,42 @@
+:root {
+  background-color: #201c18;
+}
+body {
+  color: rgba(237, 219, 208, 0.8);
+  font-family: "Cormorant Garamond Italic", "Cormorant Garamond", serif;
+  font-size: 1.5em;
+  user-select: none;
+  height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  transition: all 0.2s;
+}
+.text-secondary {
+  color: rgba(236, 206, 187, 0.3);
+}
+.quotation::before {
+  content: '“';
+}
+.quotation::after {
+  content: '„';
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgba(236, 206, 187, 0.5);
+}
+a:active {
+  color: white;
+}
+a:visited {
+  color: rgba(236, 206, 187, 0.5);
+}
+/*# sourceMappingURL=common.css.map */

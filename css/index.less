@@ -1,0 +1,27 @@
+@import "common";
+
+body {
+	gap: 2em;
+}
+
+#quotation * {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+#menu > li {
+	margin-block: 1em;
+}
+#menu {
+	a {
+		text-decoration: none;
+		color: @color-text-main-dark;
+	}
+	a:hover {
+		color: @color-text-main;
+	}
+	a:active {
+		color: @color-text-active;
+	}
+}

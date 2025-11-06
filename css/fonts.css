@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../assets/fonts/cormorant-garamond.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cormorant Garamond Italic";
+  font-style: italic;
+  src: url("../assets/fonts/cormorant-garamond-italic.ttf") format("truetype");
+}
+/*# sourceMappingURL=fonts.css.map */

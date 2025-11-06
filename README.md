@@ -2,14 +2,7 @@
 **The repository for my portfolio**
 
 > [!NOTE]
-> Currently looking for inspo and thinking very hard about the graphic style i want to use.
-
-Once complete, the portfolio will contain:
-- [ ] A quick introduction
-- [ ] A showcase with some of my projects
-- [ ] A contact form or contact info
-- [ ] A lot of filler stuff
-
+> I do this in my free time. It will take a while.
 
 Come back later to see if I actually got enough motivation to finish it
 

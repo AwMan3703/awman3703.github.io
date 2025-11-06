@@ -1,0 +1,14 @@
+mixin defaultmeta()
+    meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="icon", href="assets/images/favicon.ico")
+
+mixin defaultcss(page_name)
+    link(rel="stylesheet", href="css/reset.css")
+    link(rel="stylesheet", href="css/fonts.css")
+    link(rel="stylesheet", href="css/common.css")
+    link(rel="stylesheet", href=`css/${page_name}.css`)
+
+mixin defaultjs(page_name)
+    script(src="js/utility.js")
+    script(src=`js/${page_name}.js`, defer)
