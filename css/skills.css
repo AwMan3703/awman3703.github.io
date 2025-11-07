@@ -52,25 +52,33 @@ a:active {
 a:visited {
   color: rgba(236, 206, 187, 0.5);
 }
-body {
-  gap: 2em;
+#search #search-reset {
+  padding-inline: 0.75em;
 }
-#quotation * {
+#search:has(#search-bar:placeholder-shown) #search-reset {
+  display: none;
+}
+#skills-list ul {
   display: flex;
-  justify-content: center;
-  margin: 0;
+  flex-direction: column;
+  align-items: center;
 }
-#menu > li {
-  margin-block: 1em;
+#skills-list li {
+  cursor: grab;
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
 }
-#menu a {
-  text-decoration: none;
-  color: rgba(236, 206, 187, 0.5);
+#skills-list li.hidden {
+  display: none;
 }
-#menu a:hover {
+#skills-list li span {
+  color: rgba(236, 206, 187, 0.3);
+}
+#skills-list:has(li:hover) li:not(:hover) {
+  color: rgba(236, 206, 187, 0.3);
+}
+#skills-list li:hover span {
   color: rgba(237, 219, 208, 0.8);
 }
-#menu a:active {
-  color: white;
-}
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=skills.css.map */

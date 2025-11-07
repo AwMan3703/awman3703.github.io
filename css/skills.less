@@ -1,0 +1,32 @@
+@import "common";
+
+#search #search-reset {
+	padding-inline: .75em;
+}
+#search:has(#search-bar:placeholder-shown) #search-reset {
+	display: none;
+}
+
+#skills-list ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#skills-list li {
+	cursor: grab;
+	display: inherit;
+	flex-direction: inherit;
+	align-items: inherit;
+}
+#skills-list li.hidden {
+	display: none;
+}
+#skills-list li span {
+	color: @color-text-secondary;
+}
+#skills-list:has(li:hover) li:not(:hover) {
+	color: @color-text-secondary;
+}
+#skills-list li:hover span {
+	color: @color-text-main;
+}

@@ -1,0 +1,58 @@
+include _mixins.jade
+
+doctype html
+
+html
+    head
+        +defaultmeta()
+        title Aw_Man3703; Skills
+        +defaultcss("skills")
+    body
+        h1#title My Skills
+
+        div#search
+            input(placeholder="⌕ Search...")#search-bar
+            button#search-reset  𐔧
+
+        div#skills-list
+            ul#tools.skills
+                li Jetbrains Suite
+                    span Webstorm, IntelliJ&nbsp;IDEA, Rider, Pycharm
+                li Visual Studio & Visual Studio Code
+                li Sublime Text
+                li XCode
+                li Unity
+                li Godot
+                li Android studio
+                li Postman
+                li Proxyman
+                li Wireshark
+
+            ul#frameworks.skills
+                li React
+                li ExpressJS
+                li Expo
+                li HaxeFlixel
+
+            ul#languages.skills
+                li Javascript/Typescript
+                li Python
+                li Java
+                li C/C++/C#
+                li HTML/Pug & CSS/LessCSS
+                li Swift
+                li Lua
+                li Haxe
+                li.text-secondary ...and MCFunction
+
+            ul#non-programming.skills
+                li Blender
+                li Aseprite
+                li Adobe Suite
+                    span Photoshop, Illustrator, InDesign, Dreamweaver
+                li MagicaVoxel
+                li Roblox Studio
+                li Notion
+                li Obsidian
+
+        +defaultjs("skills")

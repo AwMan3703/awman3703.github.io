@@ -6,8 +6,8 @@ body {
   font-family: "Cormorant Garamond Italic", "Cormorant Garamond", serif;
   font-size: 1.5em;
   user-select: none;
-  height: 100dvh;
   margin: 0;
+  padding-block: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +24,19 @@ body {
 }
 .quotation::after {
   content: '„';
+}
+input,
+button {
+  color: rgba(237, 219, 208, 0.8);
+  background-color: transparent;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgba(236, 206, 187, 0.1);
+  padding: 0.5em;
+}
+input::placeholder {
+  color: rgba(236, 206, 187, 0.3);
 }
 a {
   cursor: pointer;
