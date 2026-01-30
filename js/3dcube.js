@@ -121,7 +121,7 @@ function frame(time) {
 }
 
 
-const target_fps = 24
+const target_fps = 30
 ctx.strokeStyle = getComputedStyle(document.body).getPropertyValue("color")
 ctx.lineWidth = 2.5
 setInterval(_ => frame(Date.now()), 1000/target_fps)
