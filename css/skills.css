@@ -1,8 +1,6 @@
-:root {
-  background-color: #201c18;
-}
 body {
   color: rgba(237, 219, 208, 0.8);
+  background-color: #201c18;
   font-family: "Cormorant Garamond Italic", "Cormorant Garamond", serif;
   font-size: 1.5em;
   user-select: none;
