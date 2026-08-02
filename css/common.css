@@ -23,6 +23,9 @@ body {
 .quotation::after {
   content: '„';
 }
+.spacer {
+  margin-block: 1em;
+}
 input,
 button {
   color: rgba(237, 219, 208, 0.8);
