@@ -1,0 +1,49 @@
+include _mixins.jade
+
+doctype html
+
+html
+    head
+        +defaultmeta()
+        title Aw_Man3703 ; Projects
+        +defaultcss("projects")
+    body
+        h1 Projects!
+        div.spacer
+        section#projectList
+            article.project
+                span.title YouTube Background player
+                a(href="https://ybp.im-bo.red") Website
+                a(href="https://github.com/AwMan3703/youtube-bg-player") Github
+                p.description
+                    | I got tired of YouTube pausing my videos when I turned off my phone's screen.
+                    | This tool allows me to play videos with my screen off.
+                    | Also allows linking playlists and saving them to LocalStorage for quick access.
+            article.project
+                span.title C boilerplate generator
+                a(href="https://awman3703.github.io/c-boilerplate-generator/") Website
+                a(href="https://github.com/AwMan3703/c-boilerplate-generator") Github
+                p.description
+                    | Small tool to generate boilerplate C code and compilation commands.
+                    | Also has settings profiles.
+            article.project
+                span.title Cheatsheet generator
+                a(href="https://awman3703.github.io/art-cheatsheet-maker/") Website
+                a(href="https://github.com/AwMan3703/art-cheatsheet-maker") Github
+                p.description
+                    | Web-based tool to create cheatsheets as I'm taking notes during class, and exports them to PNG.
+                    | Also allows multiple profiles via JSON config, corresponding to the different subjects I'm taking notes on.
+            article.project
+                span.title Vinder
+                a(href="https://github.com/AwMan3703/vinder") Github
+                p.description
+                    | Logs into Vinted (second-hand clothes & electronics) with my credentials and creates a Tinder-style feed.
+                    | I can "like" products in this feed to add them to my account's favorites, or make the lowest allowed offer to the seller, directly from the UI.
+            article.project
+                span.title Pocket Folder
+                a(href="https://github.com/AwMan3703/pocket-folder") Github
+                p.description
+                    | macOS application that sits in the menu bar, and allows quick access (and drag/drop) to selected folders.
+        div.spacer
+        p.text-secondary More coming soon...
+        +defaultjs("projects")

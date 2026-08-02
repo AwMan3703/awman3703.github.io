@@ -1,0 +1,28 @@
+@import "common";
+
+#projectList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+}
+
+.project {
+	width: min(500px, 100%);
+	
+	.title {
+		display: block;
+		font-weight: bold;
+	}
+	a {
+		margin-inline-end: .5em;
+		color: @color-text-main-dark;
+	}
+	a:hover {
+		color: unset;
+	}
+	.description {
+		color: @color-text-secondary;
+		margin-block-start: .25em;
+	}
+}

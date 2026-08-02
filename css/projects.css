@@ -1,0 +1,80 @@
+body {
+  color: rgba(237, 219, 208, 0.8);
+  background-color: #201c18;
+  font-family: "Cormorant Garamond Italic", "Cormorant Garamond", serif;
+  font-size: 1.5em;
+  user-select: none;
+  margin: 0;
+  padding-block: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  transition: all 0.2s;
+}
+.text-secondary {
+  color: rgba(236, 206, 187, 0.3);
+}
+.quotation::before {
+  content: '“';
+}
+.quotation::after {
+  content: '„';
+}
+.spacer {
+  margin-block: 1em;
+}
+input,
+button {
+  color: rgba(237, 219, 208, 0.8);
+  background-color: transparent;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgba(236, 206, 187, 0.1);
+  padding: 0.5em;
+}
+input::placeholder {
+  color: rgba(236, 206, 187, 0.3);
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgba(236, 206, 187, 0.5);
+}
+a:active {
+  color: white;
+}
+a:visited {
+  color: rgba(236, 206, 187, 0.5);
+}
+#projectList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+.project {
+  width: min(500px, 100%);
+}
+.project .title {
+  display: block;
+  font-weight: bold;
+}
+.project a {
+  margin-inline-end: 0.5em;
+  color: rgba(236, 206, 187, 0.5);
+}
+.project a:hover {
+  color: unset;
+}
+.project .description {
+  color: rgba(236, 206, 187, 0.3);
+  margin-block-start: 0.25em;
+}
+/*# sourceMappingURL=projects.css.map */
